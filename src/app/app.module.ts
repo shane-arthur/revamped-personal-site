@@ -8,6 +8,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HeaderItemComponent } from './components/header/header-item/header-item.component';
 import { HomeTextComponent } from './components/home/home-text/home-text.component';
 import { ProfessionTextComponent } from './components/home/profession-text/profession-text.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProfessionTextComponent } from './components/home/profession-text/profe
     HomePageComponent,
     HeaderItemComponent,
     HomeTextComponent,
-    ProfessionTextComponent
+    ProfessionTextComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

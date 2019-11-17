@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'header-item',
@@ -10,11 +9,11 @@ export class HeaderItemComponent {
 
   @Input() title: string;
   @Input() url: string;
-  constructor(private router: Router) { }
+  @Output() headerItemClicked = new EventEmitter();
+  constructor() { }
 
- 
-  navigateTo() : void {
-    this.router.navigateByUrl(this.url); 
+  clickEvent(){
+    this.headerItemClicked.emit({url: this.url});
   }
 
 }

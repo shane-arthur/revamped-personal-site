@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 interface IHeaderItems {
   title: string;
@@ -11,7 +11,7 @@ interface IHeaderItems {
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  @Output() headerItemClicked = new EventEmitter();
   headerItems: IHeaderItems[] = null;
   constructor() { }
 
@@ -22,6 +22,11 @@ export class HeaderComponent implements OnInit {
       { title: 'About', url: 'About' },
       { title: 'Resume', url: 'Resume' }
     ]
+  }
+
+  headerItemClickedFunc($event) {
+    const { url } = $event;
+    this.headerItemClicked.emit({ url });
   }
 
 }
