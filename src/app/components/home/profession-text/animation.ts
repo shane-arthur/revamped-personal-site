@@ -3,7 +3,7 @@ import { trigger, style, transition, animate, keyframes } from '@angular/animati
 export const Animations = {
     pageLoadTrigger: trigger('pageLoadTrigger', [
         transition('void => *', [
-            animate(1000, keyframes([
+            animate(1500, keyframes([
                 style({ opacity: 0, color: '#051414' }),
                 style({ opacity: 0.1, color: '#0f3d3d' }),
                 style({ opacity: 0.2, color: '#1f7a7a' }),
