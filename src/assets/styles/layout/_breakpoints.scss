@@ -1,0 +1,31 @@
+@import './_tokens.scss';
+
+// SMALL - 480px + = 30em
+@mixin mq-small-min {
+  @media (min-width: $mq-small) {
+      @content;
+  }
+}
+
+
+// MEDIUM - 768px + = 48em
+@mixin mq-medium-min {
+  @media (min-width: $mq-medium) {
+      @content;
+  }
+}
+
+
+// LARGE - 1025p x+ = 64em
+@mixin mq-large-min {
+  @media (min-width: ($mq-large)) {
+      @content;
+  }
+}
+
+// LARGE - 1600px+ = 90em
+@mixin mq-x-large-min {
+  @media (min-width: ($mq-x-large)) {
+      @content;
+  }
+}

@@ -1,0 +1,63 @@
+@import '../../../../assets/styles/abstracts/_variables';
+@import '../../../../assets/styles/layout/_breakpoints';
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    font-family: 'Oswald:Bold';
+    position: absolute;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $shane-site-white;
+
+    @include mq-large-min {
+      font-size: 4.0rem;
+    }
+
+  }
+
+  span:before {
+    color: $shane-site-secondary-black;
+    position: absolute;
+    width: 0;
+    overflow: hidden;
+    transition: 0.9s;
+  }
+
+  span:hover:before {
+    width: 100%;
+  }
+
+  .first-name {
+    left: 33.0%;
+
+    @include mq-large-min {
+      left: 41.0%;
+    }
+  }
+
+  .last-name {
+    left: 67.0%;
+
+    @include mq-large-min {
+      left: 59.0%;
+    }
+  }
+
+  .first-name:before {
+    content: 'Shane';
+  }
+
+  .last-name:before {
+    content: 'Arthur';
+  }
+
+}

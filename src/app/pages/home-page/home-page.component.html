@@ -1,0 +1,6 @@
+<section class="fag">
+    <home-text (showProfession)="onShowProfession()"></home-text>
+    <ng-container *ngIf="showProfession">
+        <profession-text></profession-text>
+    </ng-container>
+</section>

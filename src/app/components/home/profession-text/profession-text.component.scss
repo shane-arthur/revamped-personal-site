@@ -1,0 +1,21 @@
+@import '../../../../assets/styles/abstracts/_variables';
+@import '../../../../assets/styles/layout/_breakpoints';
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 5em;
+  font-size: 1.3rem;
+
+  @include mq-large-min{
+    font-size: 2.0rem;
+  }
+
+  span {
+    font-family: 'Oswald:Bold';
+    color: $shane-site-white;
+  }
+
+}

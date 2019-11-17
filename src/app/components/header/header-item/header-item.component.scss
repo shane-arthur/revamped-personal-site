@@ -1,0 +1,29 @@
+@import '../../../../assets/styles/abstracts/_variables';
+@import '../../../../assets/styles/layout/_breakpoints';
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 5em;
+    cursor: pointer;
+
+    @include mq-large-min{
+      width: 10rem;
+    }
+
+    nav:first-child{
+      margin-right: 10%;
+    }
+
+    p {
+      text-align: center;
+      color: $shane-site-white;
+    }
+
+    p:hover{
+      transform: scale(1.1);
+    }
+
+  }
+  
