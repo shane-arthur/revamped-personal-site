@@ -47,6 +47,12 @@ div {
 
         .description-container {
             margin: 2.5%;
+            height: 200px;
+            overflow-y: auto;
+            
+            @include mq-large-min{
+                height: auto;
+            }
 
             p {
                 text-indent: 0.75em;
@@ -72,8 +78,18 @@ div {
                     margin: 10px;
 
                     img {
-                        height: 44px;
-                        width: 44px;
+                        height: 22px;
+                        width: 22px;
+
+                        @include mq-medium-min{
+                            height: 33px;
+                            width: 33px;
+                        }
+
+                        @include mq-large-min{
+                            height: 44px;
+                            width: 44px;
+                        }
                     }
 
                 }
