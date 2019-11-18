@@ -9,12 +9,15 @@ import { ModalService } from './services/modal.service';
 })
 export class AppComponent {
 
+  popupType: string;
   constructor(private modalService: ModalService){
 
   }
 
   headerItemClicked($event) {
-    this.modalService.open('about-popup');
+    const { url } = $event;
+    this.popupType = url;
+    this.modalService.open('item-popup');
   }
 
 }

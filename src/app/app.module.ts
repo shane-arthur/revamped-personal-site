@@ -9,6 +9,9 @@ import { HeaderItemComponent } from './components/header/header-item/header-item
 import { HomeTextComponent } from './components/home/home-text/home-text.component';
 import { ProfessionTextComponent } from './components/home/profession-text/profession-text.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { ModalContainerComponent } from './modal-container/modal-container.component';
+import { DynamicComponentDirective } from './directives/dynamic-component.directive';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { ModalComponent } from './components/modal/modal.component';
     HeaderItemComponent,
     HomeTextComponent,
     ProfessionTextComponent,
-    ModalComponent
+    ModalComponent,
+    ModalContainerComponent,
+    DynamicComponentDirective,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +32,7 @@ import { ModalComponent } from './components/modal/modal.component';
     BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AboutComponent]
 })
 export class AppModule { }

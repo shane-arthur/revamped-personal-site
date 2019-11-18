@@ -3,7 +3,6 @@
     <router-outlet></router-outlet>
 </div>
 
-<modal-component id="about-popup">
-    <h1 style="height:1000px">A Tall Custom Modal!</h1>
-    <button (click)="closeModal('custom-modal-2');">Close</button>
+<modal-component id="item-popup">
+    <modal-container [type]="popupType"></modal-container>
 </modal-component>
