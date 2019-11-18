@@ -12,6 +12,8 @@ import { ModalComponent } from './components/modal/modal.component';
 import { ModalContainerComponent } from './modal-container/modal-container.component';
 import { DynamicComponentDirective } from './directives/dynamic-component.directive';
 import { AboutComponent } from './components/about/about.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { ResumeComponent } from './components/resume/resume.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { AboutComponent } from './components/about/about.component';
     ModalComponent,
     ModalContainerComponent,
     DynamicComponentDirective,
-    AboutComponent
+    AboutComponent,
+    PortfolioComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +37,6 @@ import { AboutComponent } from './components/about/about.component';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [AboutComponent]
+  entryComponents: [AboutComponent, PortfolioComponent, ResumeComponent]
 })
 export class AppModule { }
