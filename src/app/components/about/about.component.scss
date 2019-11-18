@@ -1,17 +1,24 @@
+@import '../../../assets/styles/layout/breakpoints';
+
 div {
     h2 {
-        font-size: 2.0rem;
+        font-size: 1.2rem;
         text-align: center;
+
+        @include mq-large-min {
+            font-size: 2.0rem;
+        }
+
     }
 
-    .close-container{
-        float:right;
+    .close-container {
+        float: right;
         margin-top: -25px;
         font-size: 1.5rem;
         cursor: pointer;
     }
 
-    .close-container:hover{
+    .close-container:hover {
         transform: scale(1.25);
         color: red;
     }
@@ -21,38 +28,55 @@ div {
         flex-direction: row;
 
         .image-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             img {
-                width: 450px;
+                width: 175px;
+                height: 250px;
+                border-radius: 10px;
+
+                @include mq-large-min{
+                    width: 450px;
                 height: 550px;
                 border-radius: 25px;
-            }
-        }
-
-        .description-container{
-            margin: 2.5%;
-
-            p{
-                text-indent: 1.25em;
-                line-height: 1.75em;
-                font-size: 1.3rem;
-            }
-
-            .home-depot-container{
-                display: flex;
-                flex-direction: row;
-
-                .image-container{
-                    display:flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    margin: 10px;
-                
-                img{
-                    height: 44px;
-                    width: 44px;
                 }
 
             }
+        }
+
+        .description-container {
+            margin: 2.5%;
+
+            p {
+                text-indent: 0.75em;
+                line-height: 1.0em;
+                font-size: 0.9rem;
+
+                @include mq-large-min{
+                    text-indent: 1.25em;
+                line-height: 1.75em;
+                font-size: 1.3rem;
+                }
+
+            }
+
+            .home-depot-container {
+                display: flex;
+                flex-direction: row;
+
+                .image-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin: 10px;
+
+                    img {
+                        height: 44px;
+                        width: 44px;
+                    }
+
+                }
 
             }
 
