@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.headerItems = [
-      { title: 'Portfolio', url: 'Portfolio' },
+      { title: 'Social Media', url: 'Portfolio' },
       { title: 'About', url: 'About' },
       { title: 'Resume', url: 'Resume' }
     ]
