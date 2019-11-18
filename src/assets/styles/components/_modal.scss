@@ -1,3 +1,6 @@
+@import '../abstracts/variables';
+@import '../abstracts//mixins';
+
 /* MODAL STYLES
 -------------------------------*/
 modal-component {
@@ -19,6 +22,8 @@ modal-component {
         overflow: auto;
 
         .modal-popup-body {
+            @include linear-gradient($shane-site-secondary-black, $shane-site-black);
+            color: $shane-site-white;
             padding: 20px;
             background: #fff;
             width: 50%;
