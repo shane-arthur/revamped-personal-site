@@ -14,6 +14,8 @@ import { DynamicComponentDirective } from './directives/dynamic-component.direct
 import { AboutComponent } from './components/about/about.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ResumeComponent } from './components/resume/resume.component';
+import { AngularSvgIconModule } from 'angular-svg-icon';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { ResumeComponent } from './components/resume/resume.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularSvgIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,54 @@
+@import '../../../assets/styles/layout/breakpoints';
+
+.hover {
+    transform: scale(1.1);
+}
+
+section {
+
+    .close-container {
+        float: right;
+        margin-top: -45px;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .close-container:hover {
+        transform: scale(1.25);
+        color: red;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 3.0rem;
+        font-weight: bold;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .github-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .linkedin-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            img {
+                width: 250px;
+            }
+        }
+
+        .github-container:hover,
+        .linkedin-container:hover {
+            @extend .hover;
+        }
+    }
+}

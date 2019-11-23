@@ -25,8 +25,8 @@ export class ModalContainerComponent implements OnChanges {
   ) { }
 
   ngOnChanges() {
-    if (this.type){
-    this.loadComponent();
+    if (this.type) {
+      this.loadComponent();
     }
   }
 

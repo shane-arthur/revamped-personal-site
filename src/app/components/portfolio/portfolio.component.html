@@ -1,1 +1,14 @@
-<p>portfolio works!</p>
+<section>
+    <div (click)="closeFunc()" class="close-container">
+        X
+    </div>
+    <h2> Find me on: </h2>
+    <main>
+        <div (click)="openLink('github')" class="github-container">
+            <svg-icon src="/assets/images/github.svg" [svgStyle]="{ 'width.px':250 }"></svg-icon>
+        </div>
+        <div (click)="openLink('linkedIn')" class="linkedin-container">
+            <img src="/assets/images/linkedin.png"/>
+        </div>
+    </main>
+</section>
