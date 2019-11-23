@@ -1,0 +1,29 @@
+@import '../../../assets/styles/layout/breakpoints';
+
+.close-container {
+    float: right;
+    margin-top: -10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.close-container:hover {
+    transform: scale(1.25);
+    color: red;
+}
+
+pdf-viewer {
+    display: none;
+
+    @include mq-large-min {
+        display: block;
+    }
+}
+
+.message-container {
+    display: block;
+
+    @include mq-large-min {
+        display: none;
+    }
+}
