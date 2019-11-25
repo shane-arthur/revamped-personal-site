@@ -24,6 +24,10 @@ handlers:
   static_files: dist/revamped-personal-site/\1
   upload: dist/revamped-personal-site/assets/images/(.*\.jpg)
 
+- url: /(.*\.jpeg)
+  static_files: dist/revamped-personal-site/\1
+  upload: dist/revamped-personal-site/(.*\.jpeg)
+
 - url: /(.*\.pdf)
   static_files: dist/revamped-personal-site/\1
   upload: dist/revamped-personal-site/assets/pdfs/(.*\.pdf)
