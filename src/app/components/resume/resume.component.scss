@@ -27,6 +27,11 @@ pdf-viewer {
 .message-container {
     display: block;
 
+    h2{
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
     @include mq-large-min {
         display: none;
     }
