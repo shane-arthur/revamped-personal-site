@@ -9,6 +9,7 @@ import { ModalService } from './services/modal.service';
 })
 export class AppComponent {
 
+  smallPopup = false;
   popupType: string;
   constructor(private modalService: ModalService){
 
@@ -17,6 +18,7 @@ export class AppComponent {
   headerItemClicked($event) {
     const { url } = $event;
     this.popupType = url;
+    this.smallPopup = url === 'Portfolio' ? true : false;
     this.modalService.open('item-popup');
   }
 

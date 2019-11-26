@@ -8,7 +8,7 @@ section {
 
     .close-container {
         float: right;
-        margin-top: -45px;
+        margin-top: -5%;
         font-size: 1.5rem;
         cursor: pointer;
     }
@@ -19,8 +19,21 @@ section {
     }
 
     h2 {
+        font-size: 1.4rem;
+
+        @include mq-medium-min {
+            font-size: 1.8rem;
+        }
+
+        @include mq-large-min {
+            font-size: 2.2rem;
+        }
+
+        @include mq-x-large-min {
+            font-size: 2.5rem;
+        }
+
         text-align: center;
-        font-size: 3.0rem;
         font-weight: bold;
     }
 
@@ -29,6 +42,18 @@ section {
         flex-direction: row;
         justify-content: space-around;
         flex-wrap: wrap;
+        padding-bottom: 25px;
+
+        @include mq-large-min {
+            padding-top: 50px;
+            padding-bottom: 100px;
+            justify-content: space-evenly;
+        }
+
+        @include mq-large-min {
+            padding-bottom: 150px;
+        }
+        
 
         .github-container {
             display: flex;
@@ -42,7 +67,7 @@ section {
             justify-content: center;
 
             img {
-                width: 250px;
+                width: 125px;
             }
         }
 

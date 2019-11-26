@@ -37,7 +37,7 @@ div {
   }
 
   .first-name {
-    left: 33.0%;
+    left: 31.0%;
 
     @include mq-large-min {
       left: 41.0%;
@@ -45,7 +45,7 @@ div {
   }
 
   .last-name {
-    left: 67.0%;
+    left: 69.0%;
 
     @include mq-large-min {
       left: 59.0%;

@@ -34,7 +34,7 @@ modal-component {
             margin-top: 150px;
             border-radius: 20px;
 
-            @include mq-large-min{
+            @include mq-large-min {
                 width: 50%;
                 margin-top: 20px;
             }

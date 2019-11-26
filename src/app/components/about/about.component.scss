@@ -13,7 +13,7 @@ div {
 
     .close-container {
         float: right;
-        margin-top: -25px;
+        margin-top: -5%;
         font-size: 1.5rem;
         cursor: pointer;
     }
@@ -26,20 +26,34 @@ div {
     .info-container {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+
+        @include mq-medium-min {
+            flex-wrap: nowrap;
+        }
 
         .image-container {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            img {
-                width: 175px;
-                height: 250px;
-                border-radius: 10px;
+            width: 100%;
 
-                @include mq-large-min{
+            img {
+                width: 150px;
+                height: 200px;
+                border-radius: 10px;
+                margin: 0 auto;
+
+                @include mq-medium-min {
+                    width: 300px;
+                    height: 375px;
+                    border-radius: 15px;
+                }
+
+                @include mq-large-min {
                     width: 450px;
-                height: 550px;
-                border-radius: 25px;
+                    height: 550px;
+                    border-radius: 25px;
                 }
 
             }
@@ -49,8 +63,8 @@ div {
             margin: 2.5%;
             height: 200px;
             overflow-y: auto;
-            
-            @include mq-large-min{
+
+            @include mq-large-min {
                 height: auto;
             }
 
@@ -59,10 +73,10 @@ div {
                 line-height: 1.0em;
                 font-size: 0.9rem;
 
-                @include mq-large-min{
+                @include mq-large-min {
                     text-indent: 1.25em;
-                line-height: 2.0em;
-                font-size: 1.2rem;
+                    line-height: 2.0em;
+                    font-size: 1.2rem;
                 }
 
             }
@@ -75,18 +89,15 @@ div {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    margin: 10px;
+                    margin: 5px;
 
                     img {
-                        height: 22px;
-                        width: 22px;
+                        height: 33px;
+                        width: 33px;
+                        margin: 0 auto;
 
-                        @include mq-medium-min{
-                            height: 33px;
-                            width: 33px;
-                        }
 
-                        @include mq-large-min{
+                        @include mq-large-min {
                             height: 44px;
                             width: 44px;
                         }
