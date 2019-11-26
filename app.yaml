@@ -50,5 +50,9 @@ handlers:
   static_files: dist/revamped-personal-site/index.html
   upload: dist/revamped-personal-site/index.html
 
+- url: /favicon\.ico
+  static_files: dist/favicon.ico
+  upload: dist/favicon.ico
+
 skip_files:
 - ^(?!dist)
