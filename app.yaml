@@ -7,30 +7,37 @@ handlers:
 - url: /(.*\.html)
   static_files: dist/revamped-personal-site/\1
   upload: dist/revamped-personal-site/(.*\.html)
+  secure: always
 
 - url: /(.*\.css)
   static_files: dist/revamped-personal-site/\1
   upload: dist/revamped-personal-site/(.*\.css)
+  secure: always
 
 - url: /(.*\.js)
   static_files: dist/revamped-personal-site/\1
   upload: dist/revamped-personal-site/(.*\.js)
+  secure: always
 
 - url: /(.*\.png)
   static_files: dist/revamped-personal-site/\1
   upload: dist/revamped-personal-site/assets/images/(.*\.png)
+  secure: always
 
 - url: /(.*\.jpg)
   static_files: dist/revamped-personal-site/\1
   upload: dist/revamped-personal-site/assets/images/(.*\.jpg)
+  secure: always
 
 - url: /(.*\.jpeg)
   static_files: dist/revamped-personal-site/\1
   upload: dist/revamped-personal-site/(.*\.jpeg)
+  secure: always
 
 - url: /(.*\.pdf)
   static_files: dist/revamped-personal-site/\1
   upload: dist/revamped-personal-site/assets/pdfs/(.*\.pdf)
+  secure: always
 
 - url: /(.*\.ttf)
   static_files: dist/revamped-personal-site/\1
@@ -39,20 +46,23 @@ handlers:
 - url: /(.*\.svg)
   static_files: dist/revamped-personal-site/\1
   upload: dist/revamped-personal-site/assets/images/*/(.*\.svg)
+  secure: always
 
 # Site root.
 - url: /
   static_files: dist/revamped-personal-site/index.html
   upload: dist/revamped-personal-site/index.html
+  secure: always
 
 # Catch-all rule, responsible from handling Angular application routes (deeplinks).
 - url: /.*
   static_files: dist/revamped-personal-site/index.html
   upload: dist/revamped-personal-site/index.html
+  secure: always
 
 - url: /favicon\.ico
-  static_files: dist/revamped-personal-site/\1
-  upload: dist/favicon.ico
+  static_files: dist/revamped-personal-site/favicon.ico
+  upload: favicon\.ico
 
 skip_files:
 - ^(?!dist)
