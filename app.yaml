@@ -64,5 +64,9 @@ handlers:
   static_files: favicon.ico
   upload: dist/revamped-personal-site/favicon\.ico
 
+- url: /github.*\.svg
+  static_files: dist/revamped-personal-site/\1
+  upload: dist/revamped-personal-site/github.*\.svg
+
 skip_files:
 - ^(?!dist)
