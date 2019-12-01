@@ -32,9 +32,10 @@ export class ModalContainerComponent implements OnChanges {
 
   loadComponent() {
     const component = componentMappings[this.type];
-    this.componentFactoryResolver.resolveComponentFactory(component);
+    const componentFactory =  this.componentFactoryResolver.resolveComponentFactory(component);
     const viewContainerRef = this.componentHost.viewContainerRef;
     viewContainerRef.clear();
+    viewContainerRef.createComponent(componentFactory);
   }
 }
 

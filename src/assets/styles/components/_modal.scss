@@ -41,9 +41,32 @@ modal-component {
 
         }
 
-        .portfolio-popup{
-            width: 70%;
+        .portfolio-popup {
+            width: 65%;
             margin-top: 10%;
+
+            @include mq-large-min{
+                width: 30%;
+            }
+
+        }
+
+        .about-popup {
+            width: 75%;
+            margin-top: 5%;
+
+            @include mq-large-min{
+                width: 50%;
+            }
+        }
+
+        .resume-popup {
+            width: 55%;
+            margin-top:10%;
+
+            @include mq-large-min{
+                margin-top: 2%;
+            }
         }
 
     }

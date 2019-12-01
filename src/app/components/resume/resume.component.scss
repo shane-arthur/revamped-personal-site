@@ -1,9 +1,47 @@
 @import '../../../assets/styles/layout/breakpoints';
 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+    /* make scrollbar transparent */
+}
+
+a {
+    width: 150px;
+    flex-direction: row;
+    justify-content: center;
+    display:flex;
+}
+
+button {
+    background: #404040;
+    color: #ffffff !important;
+    font-weight: 100;
+    padding: 5px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+    width: 75%;
+    font-size: 1.1rem;
+}
+
+button:hover {
+    color: darkgray !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px;
+    background: none;
+    background-color: white;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.3s ease 0s;
+    transform: scale(1.1);
+}
+
 .close-container {
     float: right;
     font-size: 1.5rem;
-    margin-top: -10%;
+    margin-top: -5%;
     cursor: pointer;
 
     @include mq-medium-min {
@@ -16,21 +54,74 @@
     color: red;
 }
 
-pdf-viewer {
+.pdf-container {
     display: none;
+    height: 850px;
+    overflow-y: hidden;
 
     @include mq-large-min {
-        display: block;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+        }
+
+        .pdf-viewer-container {
+            display: flex;
+            flex-direction: column;
+
+            .page-display-container {
+                display: flex;
+                margin: 10px;
+                justify-content: space-evenly;
+
+                .page-counter-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    .page-counter {
+                        border: 1px solid white;
+                        padding: 10px;
+                        border-radius: 15px;
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    .ng2-pdf-viewer-container {
+        overflow-x: hidden;
     }
 }
 
-.message-container {
-    display: block;
-    height: 250px;
+.pdf-viewer::-webkit-scrollbar {
+    display: none;
+}
 
-    h2{
-        font-size: 1.1rem;
+.message-container {
+    display: flex;
+    height: 200px;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+        font-size: 1.3rem;
         text-align: center;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
     }
 
     @include mq-large-min {

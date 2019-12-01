@@ -2,8 +2,10 @@ import { Component, ElementRef, Input, OnInit, OnDestroy } from '@angular/core';
 import { ModalService } from '../../services/modal.service';
 
 const MODEL_TYPES = {
-    PROFILE: 'profile'
-}
+    PORTFOLIO: 'Portfolio',
+    ABOUT: 'About',
+    RESUME: 'Resume'
+};
 
 @Component({
     selector: 'modal-component',
@@ -12,7 +14,7 @@ const MODEL_TYPES = {
 export class ModalComponent implements OnInit, OnDestroy {
     @Input() id: string;
     @Input() type: string;
-    modelTypes = MODEL_TYPES;
+    modalTypes = MODEL_TYPES;
     private element: any;
 
     constructor(private modalService: ModalService, private el: ElementRef) {

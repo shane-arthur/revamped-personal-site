@@ -1,11 +1,39 @@
 <div (click)="closeFunc()" class="close-container">
-        X
+    X
+</div>
+<div class="pdf-container">
+    <div class="button-container">
+        <button (click)="onPrevClick()" [disabled]="currentPage === 1">
+            Prev
+        </button>
     </div>
-
-<pdf-viewer [src]="pdfSrc" [render-text]="true"></pdf-viewer>
-
+    <div class="pdf-viewer-container">
+        <div class="page-display-container">
+            <div class="page-counter-container">
+                <div class="page-counter">
+                    Current Page : <span [@numberChanged]="currentPage"> {{currentPage}} / {{maxPages}}</span>
+                </div>
+            </div>
+            <div class="button-container">
+                <a href='../../../assets/pdfs/resume.pdf' download="shane_arthur_resume_2019">
+                    <button> Download </button>
+                </a>
+            </div>
+        </div>
+        <pdf-viewer [show-all]="false" [page]="currentPage" [zoom]="'0.8'" class="pdf-viewer" [src]="pdfSrc"
+            [render-text]="true"></pdf-viewer>
+    </div>
+    <div class="button-container">
+        <button [disabled]="currentPage === maxPages" (click)="onNextClick()">Next</button>
+    </div>
+</div>
 <div class="message-container">
     <h2>
-        Please view this page on a desktop
+        Please view this page on a desktop or:
     </h2>
+    <div class="button-container">
+    <a href='../../../assets/pdfs/resume.pdf' download="shane_arthur_resume_2019">
+        <button> Download </button>
+    </a>
+</div>
 </div>
