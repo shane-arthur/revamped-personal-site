@@ -8,7 +8,7 @@ section {
 
     .close-container {
         float: right;
-        margin-top: -5%;
+        margin-top: -7.5%;
         font-size: 1.5rem;
         cursor: pointer;
     }
@@ -43,22 +43,40 @@ section {
         justify-content: space-around;
         flex-wrap: wrap;
         padding-bottom: 25px;
+        width: 75%;
+        margin: 0 auto;
 
         @include mq-large-min {
             padding-top: 50px;
             padding-bottom: 100px;
             justify-content: space-evenly;
+            width: 90%;
         }
 
         @include mq-large-min {
-            padding-bottom: 150px;
+            padding-bottom: 100px;
         }
-        
+
 
         .github-container {
             display: flex;
             flex-direction: column;
             justify-content: center;
+
+            .github-image {
+                height: 75px;
+                width: 75px;
+                background-size: 75px;
+                background-image: url('../../../assets/images/github.svg');
+
+                @include mq-large-min {
+                    height: 150px;
+                    width: 150px;
+                    background-size: 150px;
+                }
+
+            }
+
         }
 
         .linkedin-container {
@@ -67,7 +85,12 @@ section {
             justify-content: center;
 
             img {
-                width: 125px;
+                width: 75px;
+
+                @include mq-large-min {
+                    width: 150px;
+                }
+
             }
         }
 

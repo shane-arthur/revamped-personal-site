@@ -13,7 +13,7 @@ div {
 
     .close-container {
         float: right;
-        margin-top: -5%;
+        margin-top: -4%;
         font-size: 1.5rem;
         cursor: pointer;
     }
@@ -61,7 +61,7 @@ div {
 
         .description-container {
             margin: 2.5%;
-            height: 200px;
+            height: 275px;
             overflow-y: auto;
 
             @include mq-large-min {

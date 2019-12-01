@@ -4,6 +4,15 @@
 @import './assets/styles/components/';
 @import './assets/styles/layout/';
 
-html, body{
+html,
+body {
     font-family: 'Oswald';
+}
+
+.ng2-pdf-viewer-container {
+    overflow: hidden;
+}
+
+button{
+    font-family: 'Oswald'
 }

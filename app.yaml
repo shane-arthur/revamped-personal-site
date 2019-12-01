@@ -61,8 +61,8 @@ handlers:
   secure: always
 
 - url: /favicon\.ico
-  static_files: dist/revamped-personal-site/favicon.ico
-  upload: favicon\.ico
+  static_files: favicon.ico
+  upload: dist/revamped-personal-site/favicon\.ico
 
 skip_files:
 - ^(?!dist)

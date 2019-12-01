@@ -18,7 +18,6 @@ export class AppComponent {
   headerItemClicked($event) {
     const { url } = $event;
     this.popupType = url;
-    this.smallPopup = url === 'Portfolio' ? true : false;
     this.modalService.open('item-popup');
   }
 

@@ -3,6 +3,6 @@
     <router-outlet></router-outlet>
 </div>
 
-<modal-component id="item-popup">
+<modal-component [type]="popupType"  id="item-popup">
     <modal-container [type]="popupType"></modal-container>
 </modal-component>
