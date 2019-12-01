@@ -9,7 +9,7 @@ div {
   height: 5em;
   font-size: 1.3rem;
 
-  @include mq-large-min{
+  @include mq-large-min {
     font-size: 2.0rem;
   }
 
@@ -18,4 +18,11 @@ div {
     color: $shane-site-white;
   }
 
+  .image-container {
+    margin-top: 5%;
+
+    @include mq-large-min {
+      margin-top: 0;
+    }
+  }
 }

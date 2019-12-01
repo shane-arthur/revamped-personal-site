@@ -61,7 +61,7 @@ handlers:
   secure: always
 
 - url: /favicon\.ico
-  static_files: favicon.ico
+  static_files: dist/revamped-personal-site/favicon.ico
   upload: dist/revamped-personal-site/favicon\.ico
 
 - url: /github.*\.svg
