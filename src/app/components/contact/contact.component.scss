@@ -1,0 +1,84 @@
+div {
+
+    .close-container {
+        float: right;
+        margin-top: -7%;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .close-container:hover {
+        transform: scale(1.25);
+        color: red;
+    }
+
+    h2 {
+        font-size: 2.0rem;
+    }
+
+    text-align:center;
+
+    .email-message {
+        margin: 0 auto;
+        width: 60%;
+        font-size: 0.9rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        button {
+            margin-top: 40px;
+            width: 350px;
+            height: 40px;
+            margin: 0 auto;
+            font-size: 0.9rem;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .form-field-container {
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin: 0 auto;
+            margin-top: 20px;
+
+            label {
+                text-align: start;
+                font-size: 1.2rem;
+            }
+
+            input {
+                width: 350px;
+                height: 30px;
+                font-size: 1.0rem;
+                color: black;
+            }
+
+            textarea {
+                font-size: 1.1rem;
+                height: 175px;
+                width: 350px;
+            }
+
+        }
+
+        .small {
+            height: 60px;
+        }
+
+        .large {
+            height: 200px;
+            margin-bottom: 20px;
+        }
+    }
+}

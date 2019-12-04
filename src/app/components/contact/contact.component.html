@@ -1,0 +1,34 @@
+<div>
+    <div (click)="closeFunc()" class="close-container">
+        X
+    </div>
+    <h2>Contact me</h2>
+    <div class="email-message">Please send me a message with your name
+        and email address and I will try to respond to your
+        inquiry in a timely manner.
+    </div>
+
+    <form id="emailForm" [formGroup]="emailFormGroup" (ngSubmit)="emailFormGroup.valid && onSubmit($event)">
+
+        <div class="form-field-container small">
+            <label> Name: </label>
+            <input type="text" placeholder="Full Name" formControlName="name" />
+        </div>
+
+        <div class="form-field-container small">
+            <label> Email: </label>
+            <input type="text" placeholder="Email Address" formControlName="email" />
+        </div>
+
+        <div class="form-field-container large">
+            <label> Message: </label>
+            <textarea formControlName="message" rows="4" cols="50">
+
+                        </textarea>
+        </div>
+
+        <button> Send Message </button>
+
+    </form>
+
+</div>

@@ -10,7 +10,8 @@ a {
     width: 150px;
     flex-direction: row;
     justify-content: center;
-    display:flex;
+    display: flex;
+    text-decoration: none;
 }
 
 button {
@@ -76,9 +77,15 @@ button:hover {
             display: flex;
             flex-direction: column;
 
+            pdf-viewer {
+                margin-top: 10px;
+            }
+
             .page-display-container {
                 display: flex;
                 margin: 10px;
+                width: 50%;
+                margin: 0 auto;
                 justify-content: space-evenly;
 
                 .page-counter-container {
