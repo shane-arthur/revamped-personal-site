@@ -45,7 +45,7 @@ modal-component {
             width: 65%;
             margin-top: 10%;
 
-            @include mq-large-min{
+            @include mq-large-min {
                 width: 30%;
             }
 
@@ -55,23 +55,28 @@ modal-component {
             width: 75%;
             margin-top: 5%;
 
-            @include mq-large-min{
+            @include mq-large-min {
                 width: 50%;
             }
         }
 
         .resume-popup {
             width: 55%;
-            margin-top:10%;
+            margin-top: 10%;
 
-            @include mq-large-min{
+            @include mq-large-min {
                 margin-top: 2%;
             }
         }
 
         .contact-popup {
-            width: 25%;
-            margin-bottom: 20px;
+            width: 80%;
+            margin-top:2.5%;
+
+            @include mq-large-min {
+                width: 25%;
+                margin-bottom: 20px;
+            }
         }
 
     }

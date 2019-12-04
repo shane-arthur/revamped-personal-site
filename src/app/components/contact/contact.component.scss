@@ -1,3 +1,5 @@
+@import '../../../assets/styles/layout/breakpoints';
+
 div {
 
     .close-container {
@@ -20,8 +22,13 @@ div {
 
     .email-message {
         margin: 0 auto;
-        width: 60%;
+        width: 95%;
         font-size: 0.9rem;
+
+        @include mq-large-min{
+            width:60%;
+        }
+
     }
 
     form {
@@ -31,12 +38,17 @@ div {
 
         button {
             margin-top: 40px;
-            width: 350px;
+            width: 300px;
             height: 40px;
             margin: 0 auto;
             font-size: 0.9rem;
             border-radius: 10px;
             margin-bottom: 10px;
+
+            @include mq-large-min {
+                width: 350px;
+            }
+
         }
 
         button:hover {
@@ -45,12 +57,16 @@ div {
         }
 
         .form-field-container {
-            width: 350px;
+            width: 300px;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             margin: 0 auto;
             margin-top: 20px;
+
+            @include mq-large-min {
+                width: 350px;
+            }
 
             label {
                 text-align: start;
@@ -58,16 +74,25 @@ div {
             }
 
             input {
-                width: 350px;
+                width: 300px;
                 height: 30px;
                 font-size: 1.0rem;
                 color: black;
+
+                @include mq-large-min {
+                    width: 350px;
+                }
             }
 
             textarea {
                 font-size: 1.1rem;
-                height: 175px;
-                width: 350px;
+                height: 150px;
+                width: 300px;
+
+                @include mq-large-min {
+                    width: 350px;
+                    height: 175px;
+                }
             }
 
         }
