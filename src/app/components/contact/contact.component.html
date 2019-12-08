@@ -13,21 +13,32 @@
         <div class="form-field-container small">
             <label> Name: </label>
             <input type="text" placeholder="Full Name" formControlName="name" />
+            <span class="error-container"
+                *ngIf="formControl.name.invalid && (formControl.name.isDirty || formControl.name.touched)">
+                Please enter your name.
+            </span>
         </div>
 
         <div class="form-field-container small">
             <label> Email: </label>
             <input type="text" placeholder="Email Address" formControlName="email" />
+            <span class="error-container"
+                *ngIf="formControl.email.invalid && (formControl.email.isDirty || formControl.email.touched)">
+                Please enter a valid email.
+            </span>
         </div>
 
         <div class="form-field-container large">
             <label> Message: </label>
             <textarea formControlName="message" rows="4" cols="50">
-
-                        </textarea>
+            </textarea>
+            <span class="error-container"
+            *ngIf="formControl.message.invalid && (formControl.message.isDirty || formControl.message.touched)">
+            Please enter a message.
+        </span>
         </div>
 
-        <button> Send Message </button>
+        <button [disabled]="!emailFormGroup.valid"> Send Message </button>
 
     </form>
 

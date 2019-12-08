@@ -25,8 +25,8 @@ div {
         width: 95%;
         font-size: 0.9rem;
 
-        @include mq-large-min{
-            width:60%;
+        @include mq-large-min {
+            width: 60%;
         }
 
     }
@@ -46,7 +46,7 @@ div {
             margin-bottom: 10px;
 
             @include mq-large-min {
-                width: 350px;
+                width: 450px;
             }
 
         }
@@ -65,7 +65,7 @@ div {
             margin-top: 20px;
 
             @include mq-large-min {
-                width: 350px;
+                width: 450px;
             }
 
             label {
@@ -80,7 +80,7 @@ div {
                 color: black;
 
                 @include mq-large-min {
-                    width: 350px;
+                    width: 450px;
                 }
             }
 
@@ -90,15 +90,20 @@ div {
                 width: 300px;
 
                 @include mq-large-min {
-                    width: 350px;
-                    height: 175px;
+                    width: 450px;
                 }
+            }
+
+            .error-container {
+                text-align: start;
+                color: #FFF933;
+                height: 14px;
             }
 
         }
 
         .small {
-            height: 60px;
+            height: 78px;
         }
 
         .large {
