@@ -25,6 +25,10 @@ div {
         width: 95%;
         font-size: 0.9rem;
 
+        @include mq-medium-min {
+            font-size: 1.0rem;
+        }
+
         @include mq-large-min {
             width: 60%;
         }
@@ -73,10 +77,15 @@ div {
                 font-size: 1.2rem;
             }
 
+            input,
+            textarea {
+                font-family: 'kanit';
+                font-size: 1.0rem;
+            }
+
             input {
                 width: 300px;
                 height: 30px;
-                font-size: 1.0rem;
                 color: black;
 
                 @include mq-large-min {
@@ -85,7 +94,6 @@ div {
             }
 
             textarea {
-                font-size: 1.1rem;
                 height: 150px;
                 width: 300px;
 
