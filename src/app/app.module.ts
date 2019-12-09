@@ -17,6 +17,8 @@ import { ResumeComponent } from './components/resume/resume.component';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { HttpClientModule } from '@angular/common/http';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { ContactComponent } from './components/contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     DynamicComponentDirective,
     AboutComponent,
     PortfolioComponent,
-    ResumeComponent
+    ResumeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -39,10 +42,11 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     BrowserAnimationsModule,
     AngularSvgIconModule,
     HttpClientModule,
-    PdfViewerModule
+    PdfViewerModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [AboutComponent, PortfolioComponent, ResumeComponent]
+  entryComponents: [AboutComponent, PortfolioComponent, ResumeComponent, ContactComponent]
 })
 export class AppModule { }

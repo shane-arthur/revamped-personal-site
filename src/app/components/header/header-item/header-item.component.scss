@@ -5,7 +5,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 7.5em;
+  width: 6em;
   cursor: pointer;
 
   @include mq-large-min {

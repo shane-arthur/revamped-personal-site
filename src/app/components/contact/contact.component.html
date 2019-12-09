@@ -1,0 +1,45 @@
+<div>
+    <div (click)="closeFunc()" class="close-container">
+        X
+    </div>
+    <h2>Contact me</h2>
+    <div class="email-message">Please send me a message with your name
+        and email address and I will try to respond to your
+        inquiry in a timely manner.
+    </div>
+
+    <form id="emailForm" [formGroup]="emailFormGroup" (ngSubmit)="emailFormGroup.valid && onSubmit($event)">
+
+        <div class="form-field-container small">
+            <label> Name: </label>
+            <input type="text" placeholder="Full Name" formControlName="name" />
+            <span class="error-container"
+                *ngIf="formControl.name.invalid && (formControl.name.isDirty || formControl.name.touched)">
+                Please enter your name.
+            </span>
+        </div>
+
+        <div class="form-field-container small">
+            <label> Email: </label>
+            <input type="text" placeholder="Email Address" formControlName="email" />
+            <span class="error-container"
+                *ngIf="formControl.email.invalid && (formControl.email.isDirty || formControl.email.touched)">
+                Please enter a valid email.
+            </span>
+        </div>
+
+        <div class="form-field-container large">
+            <label> Message: </label>
+            <textarea formControlName="message" rows="4" cols="50">
+            </textarea>
+            <span class="error-container"
+            *ngIf="formControl.message.invalid && (formControl.message.isDirty || formControl.message.touched)">
+            Please enter a message.
+        </span>
+        </div>
+
+        <button [disabled]="!emailFormGroup.valid"> Send Message </button>
+
+    </form>
+
+</div>

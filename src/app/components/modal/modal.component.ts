@@ -4,7 +4,8 @@ import { ModalService } from '../../services/modal.service';
 const MODEL_TYPES = {
     PORTFOLIO: 'Portfolio',
     ABOUT: 'About',
-    RESUME: 'Resume'
+    RESUME: 'Resume',
+    CONTACT: 'Contact'
 };
 
 @Component({
