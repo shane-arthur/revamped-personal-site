@@ -385,7 +385,7 @@ exports.RenderType_AboutComponent = RenderType_AboutComponent;
 function View_AboutComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 17, "div", [], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 1, "div", [["class", "close-container"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (_co.closeFunc() !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), (_l()(), i1.ɵted(-1, null, [" X "])), (_l()(), i1.ɵeld(3, 0, null, null, 1, "h2", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Hi, I'm Shane Arthur"])), (_l()(), i1.ɵeld(5, 0, null, null, 12, "div", [["class", "info-container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 1, "div", [["class", "image-container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 0, "img", [["src", "../../../assets/images/shane.png"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 9, "div", [["class", "description-container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" I am a software engineer who was born in Halifax, NS and raised in Bedford, NS. I Attended Memorial University of Newfoundland in 2008, and in 2012 graduated with my Bachelor of Science in Computer Science. "])), (_l()(), i1.ɵeld(11, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Software Development has taken me across the contient; I studied in St John's, NL, and since graduation have worked in New York City NY, Toronto ON, Calgary AB, Halifax NS, and Fredericton NB "])), (_l()(), i1.ɵeld(13, 0, null, null, 4, "div", [["class", "home-depot-container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" I am currently working in North York, ON as a front-end architect for The Home Depot Canada."])), (_l()(), i1.ɵeld(16, 0, null, null, 1, "div", [["class", "image-container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(17, 0, null, null, 0, "img", [["src", "../../../assets/images/homedepot.png"]], null, null, null, null, null))], null, null); }
+    } return ad; }, null, null)), (_l()(), i1.ɵted(-1, null, [" X "])), (_l()(), i1.ɵeld(3, 0, null, null, 1, "h2", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Hi, I'm Shane Arthur"])), (_l()(), i1.ɵeld(5, 0, null, null, 12, "div", [["class", "info-container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 1, "div", [["class", "image-container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 0, "img", [["alt", "'shane arthur'"], ["src", "../../../assets/images/shane.png"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 9, "div", [["class", "description-container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" I am a software engineer who was born in Halifax, NS and raised in Bedford, NS. I Attended Memorial University of Newfoundland in 2008, and in 2012 graduated with my Bachelor of Science in Computer Science. "])), (_l()(), i1.ɵeld(11, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Software Development has taken me across the contient; I studied in St John's, NL, and since graduation have worked in New York City NY, Toronto ON, Calgary AB, Halifax NS, and Fredericton NB "])), (_l()(), i1.ɵeld(13, 0, null, null, 4, "div", [["class", "home-depot-container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" I am currently working in North York, ON as a front-end architect for The Home Depot Canada."])), (_l()(), i1.ɵeld(16, 0, null, null, 1, "div", [["class", "image-container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(17, 0, null, null, 0, "img", [["alt", "home depot"], ["src", "../../../assets/images/homedepot.png"]], null, null, null, null, null))], null, null); }
 exports.View_AboutComponent_0 = View_AboutComponent_0;
 function View_AboutComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-about", [], null, null, null, View_AboutComponent_0, RenderType_AboutComponent)), i1.ɵdid(1, 49152, null, 0, i2.AboutComponent, [i3.ModalService], null, null)], null, null); }
 exports.View_AboutComponent_Host_0 = View_AboutComponent_Host_0;
@@ -893,7 +893,7 @@ var i2 = __webpack_require__(/*! ./profession-text.component */ "./src/app/compo
 var styles_ProfessionTextComponent = [i0.styles];
 var RenderType_ProfessionTextComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_ProfessionTextComponent, data: { "animation": [{ type: 7, name: "pageLoadTrigger", definitions: [{ type: 1, expr: "void => *", animation: [{ type: 4, styles: { type: 5, steps: [{ type: 6, styles: { opacity: 0, color: "#051414" }, offset: null }, { type: 6, styles: { opacity: 0.1, color: "#0f3d3d" }, offset: null }, { type: 6, styles: { opacity: 0.2, color: "#1f7a7a" }, offset: null }, { type: 6, styles: { opacity: 0.3, color: "#29a3a3" }, offset: null }, { type: 6, styles: { opacity: 0.4, color: "#33cccc" }, offset: null }, { type: 6, styles: { opacity: 0.5, color: "#5cd6d6" }, offset: null }, { type: 6, styles: { opacity: 0.6, color: "#85e0e0" }, offset: null }, { type: 6, styles: { opacity: 0.7, color: "#99e6e6" }, offset: null }, { type: 6, styles: { opacity: 0.8, color: "#c2f0f0" }, offset: null }, { type: 6, styles: { opacity: 0.9, color: "#ebfafa" }, offset: null }, { type: 6, styles: { opacity: 1, color: "#ffffff" }, offset: null }] }, timings: 1500 }], options: null }], options: {} }] } });
 exports.RenderType_ProfessionTextComponent = RenderType_ProfessionTextComponent;
-function View_ProfessionTextComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 6, "div", [["class", "profession-container"]], [[24, "@pageLoadTrigger", 0]], null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 1, "span", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Software Engineer "])), (_l()(), i1.ɵeld(3, 0, null, null, 1, "span", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Toronto, Ontario, Canada"])), (_l()(), i1.ɵeld(5, 0, null, null, 1, "span", [["class", "image-container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 0, "img", [], [[8, "src", 4]], null, null, null, null))], null, function (_ck, _v) { var currVal_0 = undefined; _ck(_v, 0, 0, currVal_0); var currVal_1 = "/assets/images/canada-flag.png"; _ck(_v, 6, 0, currVal_1); }); }
+function View_ProfessionTextComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 6, "div", [["class", "profession-container"]], [[24, "@pageLoadTrigger", 0]], null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 1, "span", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Software Engineer "])), (_l()(), i1.ɵeld(3, 0, null, null, 1, "span", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Toronto, Ontario, Canada"])), (_l()(), i1.ɵeld(5, 0, null, null, 1, "span", [["class", "image-container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 0, "img", [["alt", "'canada'"]], [[8, "src", 4]], null, null, null, null))], null, function (_ck, _v) { var currVal_0 = undefined; _ck(_v, 0, 0, currVal_0); var currVal_1 = "/assets/images/canada-flag.png"; _ck(_v, 6, 0, currVal_1); }); }
 exports.View_ProfessionTextComponent_0 = View_ProfessionTextComponent_0;
 function View_ProfessionTextComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "profession-text", [], null, null, null, View_ProfessionTextComponent_0, RenderType_ProfessionTextComponent)), i1.ɵdid(1, 49152, null, 0, i2.ProfessionTextComponent, [], null, null)], null, null); }
 exports.View_ProfessionTextComponent_Host_0 = View_ProfessionTextComponent_Host_0;
@@ -1080,7 +1080,7 @@ function View_PortfolioComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0
     } return ad; }, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 0, "div", [["class", "github-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 1, "div", [["class", "linkedin-container"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (_co.openLink("linkedIn") !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 0, "img", [["src", "/assets/images/linkedin.png"]], null, null, null, null, null))], null, null); }
+    } return ad; }, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 0, "img", [["alt", "'linkedIn'"], ["src", "/assets/images/linkedin.png"]], null, null, null, null, null))], null, null); }
 exports.View_PortfolioComponent_0 = View_PortfolioComponent_0;
 function View_PortfolioComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-portfolio", [], null, null, null, View_PortfolioComponent_0, RenderType_PortfolioComponent)), i1.ɵdid(1, 49152, null, 0, i2.PortfolioComponent, [i3.ModalService], null, null)], null, null); }
 exports.View_PortfolioComponent_Host_0 = View_PortfolioComponent_Host_0;
@@ -1370,6 +1370,7 @@ var i4 = __webpack_require__(/*! ../../components/home/home-text/home-text.compo
 var i5 = __webpack_require__(/*! ../../components/home/home-text/home-text.component */ "./src/app/components/home/home-text/home-text.component.ts");
 var i6 = __webpack_require__(/*! @angular/common */ "@angular/common");
 var i7 = __webpack_require__(/*! ./home-page.component */ "./src/app/pages/home-page/home-page.component.ts");
+var i8 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
 var styles_HomePageComponent = [i0.styles];
 var RenderType_HomePageComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_HomePageComponent, data: {} });
 exports.RenderType_HomePageComponent = RenderType_HomePageComponent;
@@ -1379,7 +1380,7 @@ function View_HomePageComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0,
         ad = (pd_0 && ad);
     } return ad; }, i4.View_HomeTextComponent_0, i4.RenderType_HomeTextComponent)), i1.ɵdid(2, 114688, null, 0, i5.HomeTextComponent, [], null, { showProfession: "showProfession" }), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_HomePageComponent_1)), i1.ɵdid(4, 16384, null, 0, i6.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; _ck(_v, 2, 0); var currVal_0 = _co.showProfession; _ck(_v, 4, 0, currVal_0); }, null); }
 exports.View_HomePageComponent_0 = View_HomePageComponent_0;
-function View_HomePageComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-home-page", [], null, null, null, View_HomePageComponent_0, RenderType_HomePageComponent)), i1.ɵdid(1, 114688, null, 0, i7.HomePageComponent, [], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_HomePageComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-home-page", [], null, null, null, View_HomePageComponent_0, RenderType_HomePageComponent)), i1.ɵdid(1, 114688, null, 0, i7.HomePageComponent, [i8.Title, i8.Meta], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_HomePageComponent_Host_0 = View_HomePageComponent_Host_0;
 var HomePageComponentNgFactory = i1.ɵccf("app-home-page", i7.HomePageComponent, View_HomePageComponent_Host_0, {}, {}, []);
 exports.HomePageComponentNgFactory = HomePageComponentNgFactory;
@@ -1422,8 +1423,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var rxjs_1 = __webpack_require__(/*! rxjs */ "rxjs");
 var operators_1 = __webpack_require__(/*! rxjs/operators */ "rxjs/operators");
+var title = "Shane Arthur's Peronsal Site";
+var description = "Personal Website with resume and contact information for Shane Arthur";
 var HomePageComponent = /** @class */ (function () {
-    function HomePageComponent() {
+    function HomePageComponent(title, meta) {
+        this.title = title;
+        this.meta = meta;
         this.showProfession = false;
     }
     HomePageComponent.prototype.onShowProfession = function () {
@@ -1433,6 +1438,11 @@ var HomePageComponent = /** @class */ (function () {
         var _this = this;
         var setShowProfession = function () { return _this.showProfession = true; };
         rxjs_1.interval(1000).pipe(operators_1.tap(setShowProfession), operators_1.take(1)).subscribe();
+        this.setMetasAndTitle();
+    };
+    HomePageComponent.prototype.setMetasAndTitle = function () {
+        this.title.setTitle(title);
+        this.meta.addTag({ name: 'description', content: description });
     };
     return HomePageComponent;
 }());

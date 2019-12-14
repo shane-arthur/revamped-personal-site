@@ -1,72 +1,16 @@
-runtime: python27
-api_version: 1
-threadsafe: yes
-
-handlers:
-    
-- url: /(.*\.html)
-  static_files: dist/revamped-personal-site/\1
-  upload: dist/revamped-personal-site/(.*\.html)
-  secure: always
-
-- url: /(.*\.css)
-  static_files: dist/revamped-personal-site/\1
-  upload: dist/revamped-personal-site/(.*\.css)
-  secure: always
-
-- url: /(.*\.js)
-  static_files: dist/revamped-personal-site/\1
-  upload: dist/revamped-personal-site/(.*\.js)
-  secure: always
-
-- url: /(.*\.png)
-  static_files: dist/revamped-personal-site/\1
-  upload: dist/revamped-personal-site/assets/images/(.*\.png)
-  secure: always
-
-- url: /(.*\.jpg)
-  static_files: dist/revamped-personal-site/\1
-  upload: dist/revamped-personal-site/assets/images/(.*\.jpg)
-  secure: always
-
-- url: /(.*\.jpeg)
-  static_files: dist/revamped-personal-site/\1
-  upload: dist/revamped-personal-site/(.*\.jpeg)
-  secure: always
-
-- url: /(.*\.pdf)
-  static_files: dist/revamped-personal-site/\1
-  upload: dist/revamped-personal-site/assets/pdfs/(.*\.pdf)
-  secure: always
-
-- url: /(.*\.ttf)
-  static_files: dist/revamped-personal-site/\1
-  upload: dist/revamped-personal-site/assets/fonts/*/(.*\.ttf)
-
-- url: /(.*\.svg)
-  static_files: dist/revamped-personal-site/\1
-  upload: dist/revamped-personal-site/assets/images/*/(.*\.svg)
-  secure: always
-
-# Site root.
-- url: /
-  static_files: dist/revamped-personal-site/index.html
-  upload: dist/revamped-personal-site/index.html
-  secure: always
-
-# Catch-all rule, responsible from handling Angular application routes (deeplinks).
-- url: /.*
-  static_files: dist/revamped-personal-site/index.html
-  upload: dist/revamped-personal-site/index.html
-  secure: always
-
-- url: /favicon\.ico
-  static_files: dist/revamped-personal-site/favicon.ico
-  upload: dist/revamped-personal-site/favicon\.ico
-
-- url: /github.*\.svg
-  static_files: dist/revamped-personal-site/\1
-  upload: dist/revamped-personal-site/github.*\.svg
-
-skip_files:
-- ^(?!dist)
+#	Copyright 2018, Google LLC.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# [START runtime]
+runtime: nodejs10
+# [END runtime]

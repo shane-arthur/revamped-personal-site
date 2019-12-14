@@ -3,18 +3,18 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build:server:prod": "ng run revamped-personal-site:server",
+    "start:dev": "ng serve",
+    "build:server:prod": "ng run revamped-personal-site:server && webpack --config webpack.server.config.js --progress --colors",
     "build:client": "ng build",
     "build:client:prod": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "prerender": "ts-node -P ./tsconfig.server.json ./prerender.ts",
-    "start:prod": "ts-node -P ./tsconfig.server.json ./server.ts",
+    "prerender": "node ./prerender.ts",
+    "start": "node --trace-warnings --max-old-space-size=6144 dist/server",
     "build:universal": "npm run build:client:prod && npm run build:server:prod",
-    "ssr": "npm run build:universal && npm run start:prod",
-    "deploy": "npm run build:prod && gcloud app deploy"
+    "ssr": "npm run build:universal && npm run start",
+    "deploy": "npm run build:universal && gcloud app deploy"
   },
   "private": true,
   "dependencies": {
@@ -32,6 +32,7 @@
     "angular-svg-icon": "^8.0.0",
     "ng2-pdf-viewer": "^6.0.2",
     "rxjs": "~6.4.0",
+    "ts-loader": "^6.2.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
@@ -54,6 +55,7 @@
     "protractor": "~5.4.0",
     "ts-node": "^7.0.1",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "webpack-cli": "^3.3.10"
   }
 }
