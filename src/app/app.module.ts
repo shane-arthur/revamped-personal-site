@@ -37,7 +37,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ContactComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularSvgIconModule,

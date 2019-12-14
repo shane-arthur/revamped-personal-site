@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 import { interval } from 'rxjs';
 import { tap, take } from 'rxjs/operators';
+import { Meta, Title } from '@angular/platform-browser';
+
+const title = `Shane Arthur's Peronsal Site`;
+const description = `Personal Website with resume and contact information for Shane Arthur`;
 
 @Component({
   selector: 'app-home-page',
@@ -10,7 +14,7 @@ import { tap, take } from 'rxjs/operators';
 export class HomePageComponent implements OnInit {
 
   showProfession = false;
-  constructor() { }
+  constructor(private title: Title, private meta: Meta) { }
 
   onShowProfession() {
     this.showProfession = true;
@@ -23,5 +27,13 @@ export class HomePageComponent implements OnInit {
       tap(setShowProfession),
       take(1)
     ).subscribe();
+
+    this.setMetasAndTitle();
+
+  }
+
+  private setMetasAndTitle() {
+    this.title.setTitle(title);
+    this.meta.addTag({ name: 'description', content: description });
   }
 }
