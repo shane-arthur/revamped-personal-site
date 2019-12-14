@@ -1,5 +1,6 @@
-import { Component, ElementRef, Input, OnInit, OnDestroy } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
 import { ModalService } from '../../services/modal.service';
+import { isPlatformBrowser } from '@angular/common';
 
 const MODEL_TYPES = {
     PORTFOLIO: 'Portfolio',
@@ -18,11 +19,26 @@ export class ModalComponent implements OnInit, OnDestroy {
     modalTypes = MODEL_TYPES;
     private element: any;
 
-    constructor(private modalService: ModalService, private el: ElementRef) {
+    constructor(
+        private modalService: ModalService, 
+        el: ElementRef,
+        @Inject(PLATFORM_ID) private platformId,) {
         this.element = el.nativeElement;
     }
 
     ngOnInit(): void {
+        if (isPlatformBrowser(this.platformId)){
+            this.initModal();
+        }
+    }
+
+    // remove self from modal service when directive is destroyed
+    ngOnDestroy(): void {
+        this.modalService.remove(this.id);
+        this.element.remove();
+    }
+
+    private initModal(){
         let modal = this;
 
         // ensure id attribute exists
@@ -43,12 +59,6 @@ export class ModalComponent implements OnInit, OnDestroy {
 
         // add self (this modal instance) to the modal service so it's accessible from controllers
         this.modalService.add(this);
-    }
-
-    // remove self from modal service when directive is destroyed
-    ngOnDestroy(): void {
-        this.modalService.remove(this.id);
-        this.element.remove();
     }
 
     // open modal
