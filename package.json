@@ -12,7 +12,8 @@
     "e2e": "ng e2e",
     "prerender": "ts-node -P ./tsconfig.server.json ./prerender.ts",
     "start:prod": "ts-node -P ./tsconfig.server.json ./server.ts",
-    "ssr": "npm run build:client:prod && npm run build:server:prod && npm run start:prod",
+    "build:universal": "npm run build:client:prod && npm run build:server:prod",
+    "ssr": "npm run build:universal && npm run start:prod",
     "deploy": "npm run build:prod && gcloud app deploy"
   },
   "private": true,
