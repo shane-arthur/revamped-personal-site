@@ -4,7 +4,7 @@ import { Observable, of } from 'rxjs';
 import { API_KEY } from '../secrets/sendgrid';
 import { IEmail } from '../models/email';
 
-const url = 'https://api.sendgrid.com/v3/mail/send';
+const url = '/send-email';
 
 @Injectable({
   providedIn: 'root'
