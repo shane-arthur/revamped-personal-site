@@ -56,8 +56,13 @@ modal-component {
             margin-top: 5%;
 
             @include mq-large-min {
+                width: 70%;
+            }
+
+            @include mq-x-large-min {
                 width: 50%;
             }
+
         }
 
         .resume-popup {
