@@ -42,6 +42,15 @@ div {
     @include mq-large-min {
       left: 41.0%;
     }
+
+    @include mq-large-med-min{
+      left: 36.0%;
+    }
+
+    @include mq-x-large-min {
+      left: 40.0%;
+    }
+
   }
 
   .last-name {
@@ -50,6 +59,15 @@ div {
     @include mq-large-min {
       left: 59.0%;
     }
+
+    @include mq-large-med-min{
+      left: 64.0%;
+    }
+
+    @include mq-x-large-min {
+      left: 60.0%;
+    }
+
   }
 
   .first-name:before {
