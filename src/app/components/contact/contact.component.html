@@ -38,7 +38,16 @@
         </span>
         </div>
 
-        <button [disabled]="!emailFormGroup.valid"> Send Message </button>
+        <button [disabled]="!emailFormGroup.valid && !isDisabled"> Send Message </button>
+
+        <div class="submit-email-message"> 
+        <span class="sucess" *ngIf="isSucess">
+            Sucessfully Submitted Message, we'll get back to you shortly!
+        </span>    
+        <span class="error" *ngIf="isError">
+                Sorry There was an error submitting your email. Please try again in a couple of minutes.
+            </span> 
+        </div>
 
     </form>
 

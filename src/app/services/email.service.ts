@@ -30,13 +30,10 @@ export class EmailService {
     };
 
     const params = new HttpParams();
-    let headers: HttpHeaders = new HttpHeaders();
-    headers = headers.append('Content-Type', 'application/json');
+    let headers: HttpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
     const options = {};
     options['params'] = params;
-    if (!!headers) {
-      options['headers'] = headers;
-    }
+    options['headers'] = headers;
     return this.http.post<any>(url, emailData, options);
 
   }

@@ -6,7 +6,7 @@ import { EmailService } from '../../services/email.service';
 import { IEmail } from '../../models/email';
 import { catchError } from 'rxjs/operators';
 import { of } from 'rxjs';
-import { tap, take } from 'rxjs/operators';
+import { tap, take, delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-contact',
@@ -17,6 +17,7 @@ export class ContactComponent implements OnInit {
   emailFormGroup: FormGroup;
   isSucess: boolean = false;
   isError: boolean = false;
+  isDisabled: boolean = false;
   constructor(private modalService: ModalService, private formBuilder: FormBuilder, private emailService: EmailService) { }
 
   get formControl(): any {
@@ -30,6 +31,7 @@ export class ContactComponent implements OnInit {
   }
 
   closeFunc() {
+    this.emailFormGroup.reset();
     this.modalService.close('item-popup');
   }
 
@@ -57,6 +59,8 @@ export class ContactComponent implements OnInit {
         this.isSucess = true
         }
       }),
+      delay(5000),
+      tap(() => this.closeFunc()),
       take(1)
     ).subscribe()
   }
