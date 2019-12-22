@@ -4,6 +4,9 @@ import { ModalService } from '../../services/modal.service';
 import { emailValidator } from '../../validators/validators';
 import { EmailService } from '../../services/email.service';
 import { IEmail } from '../../models/email';
+import { catchError } from 'rxjs/operators';
+import { of } from 'rxjs';
+import { tap, take, delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-contact',
@@ -12,6 +15,9 @@ import { IEmail } from '../../models/email';
 })
 export class ContactComponent implements OnInit {
   emailFormGroup: FormGroup;
+  isSucess: boolean = false;
+  isError: boolean = false;
+  isDisabled: boolean = false;
   constructor(private modalService: ModalService, private formBuilder: FormBuilder, private emailService: EmailService) { }
 
   get formControl(): any {
@@ -25,6 +31,9 @@ export class ContactComponent implements OnInit {
   }
 
   closeFunc() {
+    this.emailFormGroup.reset();
+    this.isSucess = false;
+    this.isError = false;
     this.modalService.close('item-popup');
   }
 
@@ -40,7 +49,22 @@ export class ContactComponent implements OnInit {
   onSubmit(e) {
     e.preventDefault();
     const data: IEmail = this.emailFormGroup.value;
-    this.emailService.sendEmail(data).subscribe();
+    this.emailService.sendEmail(data).pipe(
+      catchError((err) => {
+        console.log(err);
+        this.isError = true;
+        return of(err)
+      }),
+      tap(() => {
+        if (!this.isError){
+        console.log('successfully submitted email');
+        this.isSucess = true
+        }
+      }),
+      delay(5000),
+      tap(() =>  this.closeFunc()),
+      take(1)
+    ).subscribe()
   }
 
 }

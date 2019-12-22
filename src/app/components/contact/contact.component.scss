@@ -118,5 +118,25 @@ div {
             height: 200px;
             margin-bottom: 20px;
         }
+
+        .submit-email-message {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .sucess {
+                color: yellow;
+                font-size: 0.9rem;
+                text-align: center;
+            }
+
+            .error {
+                color: red;
+                font-size: 0.9rem;
+                text-align: center;
+            }
+
+        }
+
     }
 }

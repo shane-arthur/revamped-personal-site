@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
     this.headerItems = [
       { title: 'Links', url: 'Portfolio' },
       { title: 'About', url: 'About' },
-     // { title: 'Contact', url: 'Contact' },
+      { title: 'Contact', url: 'Contact' },
       { title: 'Resume', url: 'Resume' }
     ]
   }
