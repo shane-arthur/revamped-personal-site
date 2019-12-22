@@ -70,4 +70,4 @@ typings/
 /dist
 
 # Secrets
-# /server/routes/app/secrets/
+/server/secrets/
