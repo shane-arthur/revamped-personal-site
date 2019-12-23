@@ -27,6 +27,7 @@ div {
 
         @include mq-medium-min {
             font-size: 1.0rem;
+            width:50%;
         }
 
         @include mq-large-min {
@@ -49,15 +50,10 @@ div {
             border-radius: 10px;
             margin-bottom: 10px;
 
-            @include mq-large-min {
+            @include mq-x-large-min {
                 width: 450px;
             }
 
-        }
-
-        button:hover {
-            background-color: black;
-            color: white;
         }
 
         .form-field-container {
@@ -68,7 +64,7 @@ div {
             margin: 0 auto;
             margin-top: 20px;
 
-            @include mq-large-min {
+            @include mq-x-large-min {
                 width: 450px;
             }
 
@@ -84,22 +80,13 @@ div {
             }
 
             input {
-                width: 300px;
                 height: 30px;
                 color: black;
 
-                @include mq-large-min {
-                    width: 450px;
-                }
             }
 
             textarea {
                 height: 150px;
-                width: 300px;
-
-                @include mq-large-min {
-                    width: 450px;
-                }
             }
 
             .error-container {

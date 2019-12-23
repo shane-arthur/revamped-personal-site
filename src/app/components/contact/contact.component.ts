@@ -31,7 +31,6 @@ export class ContactComponent implements OnInit {
   }
 
   closeFunc() {
-    this.emailFormGroup.reset();
     this.isSucess = false;
     this.isError = false;
     this.modalService.close('item-popup');
@@ -58,7 +57,8 @@ export class ContactComponent implements OnInit {
       tap(() => {
         if (!this.isError){
         console.log('successfully submitted email');
-        this.isSucess = true
+        this.isSucess = true;
+        this.emailFormGroup.reset();
         }
       }),
       delay(5000),
