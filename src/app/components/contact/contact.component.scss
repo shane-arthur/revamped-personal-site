@@ -27,7 +27,7 @@ div {
 
         @include mq-medium-min {
             font-size: 1.0rem;
-            width:50%;
+            width: 50%;
         }
 
         @include mq-large-min {
@@ -43,7 +43,7 @@ div {
 
         button {
             margin-top: 40px;
-            width: 300px;
+            width: 275px;
             height: 40px;
             margin: 0 auto;
             font-size: 0.9rem;
@@ -57,7 +57,7 @@ div {
         }
 
         .form-field-container {
-            width: 300px;
+            width: 275px;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -126,4 +126,8 @@ div {
         }
 
     }
+}
+
+.active-button {
+    background-color: white;
 }
