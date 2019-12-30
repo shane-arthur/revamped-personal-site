@@ -19,6 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { ContactComponent } from './components/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AppShellNoRenderDirective } from './directives/app-shell-no-render.directive';
+import { AppShellRenderDirective } from './directives/app-shell-render.directive';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AboutComponent,
     PortfolioComponent,
     ResumeComponent,
-    ContactComponent
+    ContactComponent,
+    AppShellNoRenderDirective,
+    AppShellRenderDirective
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
