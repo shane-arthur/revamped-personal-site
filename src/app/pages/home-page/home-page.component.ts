@@ -4,7 +4,9 @@ import { tap, take } from 'rxjs/operators';
 import { Meta, Title } from '@angular/platform-browser';
 
 const title = `Shane Arthur's Peronsal Site`;
-const description = `Personal Website with resume and contact information for Shane Arthur`;
+const description = `Shane Arthur, Toronto Ontario, Software Engineer, Halifax NS`;
+const url = 'https://www.shane-arthur.io';
+const robots = 'INDEX, FOLLOW';
 
 @Component({
   selector: 'app-home-page',
@@ -35,5 +37,7 @@ export class HomePageComponent implements OnInit {
   private setMetasAndTitle() {
     this.title.setTitle(title);
     this.meta.addTag({ name: 'description', content: description });
+    this.meta.addTag({ name: 'url', content: url });
+    this.meta.addTag({ name: 'robots', content: robots })
   }
 }
