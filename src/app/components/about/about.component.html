@@ -7,11 +7,21 @@
 
     <div class="info-container">
         <div class="image-container">
-            <img src="../../../assets/images/shane.png" alt="'shane arthur'" />
+            <!-- <img src="../../../assets/images/shane.png" alt="'shane arthur'" /> -->
+            <ngu-carousel [dataSource]="carouselTileItems" [inputs]="carouselSettings">
+                <ngu-tile *nguCarouselDef="let item; let j = index">
+                    <ng-container *ngIf="j % 2 === 0">
+                        <img src="../../../assets/images/shane.png" alt="'shane arthur'" />
+                    </ng-container>
+                    <ng-container *ngIf="j % 2 !== 0">
+                        <img src="../../../assets/images/shane2.jpg" alt="'shane arthur'" />
+                    </ng-container>
+                </ngu-tile>
+            </ngu-carousel>
         </div>
         <div class="description-container">
             <p> I am a software engineer born in Halifax, NS and raised in Bedford,
-                NS.  I attended Memorial University of Newfoundland in 2008, and in 2012 graduated with my Bachelor of
+                NS. I attended Memorial University of Newfoundland in 2008, and in 2012 graduated with my Bachelor of
                 Science
                 in Computer Science.
             </p>

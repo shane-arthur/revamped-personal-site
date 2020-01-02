@@ -18,3 +18,12 @@ body {
 button {
     font-family: 'Oswald'
 }
+
+ngu-tile {
+    .tile {
+        box-shadow: none !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
