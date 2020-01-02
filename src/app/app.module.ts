@@ -21,6 +21,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppShellNoRenderDirective } from './directives/app-shell-no-render.directive';
 import { AppShellRenderDirective } from './directives/app-shell-render.directive';
+import { NguCarouselModule } from '@ngu/carousel';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { AppShellRenderDirective } from './directives/app-shell-render.directive
     AngularSvgIconModule,
     HttpClientModule,
     PdfViewerModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NguCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent],
