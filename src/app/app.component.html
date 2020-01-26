@@ -4,7 +4,11 @@
 </div>
 
 <ng-container *appShellNoRender>
-<modal-component [type]="popupType"  id="item-popup">
-    <modal-container [type]="popupType"></modal-container>
-</modal-component>
+    <modal-component [type]="popupType" id="item-popup">
+        <modal-container [type]="popupType"></modal-container>
+    </modal-component>
+</ng-container>
+
+<ng-container *ngIf="preloadedImageUrl">
+    <img [src]="preloadedImageUrl" />
 </ng-container>
