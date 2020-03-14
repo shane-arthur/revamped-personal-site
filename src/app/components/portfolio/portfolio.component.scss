@@ -6,6 +6,10 @@
 
 section {
 
+    main div {
+        margin: 5px;
+    }
+
     .close-container {
         float: right;
         margin-top: -7.5%;
@@ -74,15 +78,14 @@ section {
                     width: 150px;
                     background-size: 150px;
                 }
-
             }
-
         }
 
         .linkedin-container {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            margin-left: 20px;
 
             img {
                 width: 75px;
@@ -90,7 +93,6 @@ section {
                 @include mq-large-min {
                     width: 150px;
                 }
-
             }
         }
 

@@ -65,15 +65,14 @@ modal-component {
             width: 55%;
             margin-top: 10%;
 
-            @include mq-large-min {
-                width: 60%;
+            @include mq-medium-min {
+                width: 75%;
                 margin-top: 2%;
             }
 
-            @include mq-large-med-min {
-                width: 80%;
+            @include mq-large-med-min{
+                width: 65%;
             }
-
         }
 
         .contact-popup {
