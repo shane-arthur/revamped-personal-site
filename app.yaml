@@ -20,4 +20,9 @@ handlers:
   redirect_http_response_code: 301
   script: auto
 
+- url: /(.*\.pdf)
+  static_files: dist/browser/\1
+  upload: dist/browser/assets/pdfs/(.*\.pdf)
+  secure: always
+
 # [END runtime]
