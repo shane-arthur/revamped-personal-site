@@ -4,12 +4,14 @@ import { AboutComponent } from '../components/about/about.component';
 import { PortfolioComponent } from '../components/portfolio/portfolio.component';
 import { ResumeComponent } from '../components/resume/resume.component';
 import { ContactComponent } from '../components/contact/contact.component';
+import { PriorWorkComponent } from '../components/prior-work/prior-work.component';
 
 const componentMappings = {
   About: AboutComponent,
   Portfolio: PortfolioComponent,
   Resume: ResumeComponent,
-  Contact: ContactComponent
+  Contact: ContactComponent,
+  PriorWork: PriorWorkComponent
 };
 
 @Component({

@@ -1,0 +1,51 @@
+.flex-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-container{
+   @extend .flex-container;
+
+    .template-container{
+        width: 390px;
+        height: 300px;
+        border-radius: 10px;
+        background-color: white;
+        color: black;
+        @extend .flex-container;
+
+        img{
+            border-radius: 10px;
+        }
+
+        .info-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2{
+                margin: 0;
+            }
+
+            span{
+                color: darkgray;
+            }
+
+        }
+
+        button{
+            font-size: 1.2rem;
+            width: 35%;
+            margin: 0 auto;
+            padding: 5px 10px 5px 10px;
+            border-radius: 5px;
+            background-color: white;
+            border: 2px solid black;
+            text-transform: uppercase;
+        }
+
+
+    }
+
+}

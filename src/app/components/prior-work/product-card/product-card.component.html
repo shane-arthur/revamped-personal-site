@@ -1,0 +1,17 @@
+ <div class="card-container" (mouseout)="changeMode(true)" (mouseover)="changeMode(false)">
+<ng-template [ngIf]="normalMode" [ngIfElse]="hovered">
+    <div class="template-container">
+        <img [src]="imgSrc" />
+    </div>
+</ng-template>
+
+<ng-template #hovered>
+    <div style="justify-content: space-evenly" class="template-container">
+        <div class="info-container">
+        <h2> Maktub App</h2>
+       <span> React Native </span>
+    </div>
+    <button> Learn More </button>
+    </div>
+</ng-template>
+</div>
