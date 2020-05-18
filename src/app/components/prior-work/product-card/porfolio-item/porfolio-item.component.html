@@ -1,0 +1,28 @@
+<section>
+        <div class="images-container">
+                <ngu-carousel [dataSource]="carouselTileItems" [inputs]="carouselSettings">
+                    <ngu-tile *nguCarouselDef="let item; let j = index">
+                        <ng-container *ngIf="j % 2 === 0">
+                            <img src="../../../assets/images/shane.png" alt="'shane arthur'" />
+                        </ng-container>
+                        <ng-container *ngIf="j % 2 !== 0">
+                            <img src="../../../assets/images/shane2.jpg" alt="'shane arthur'" />
+                        </ng-container>
+                    </ngu-tile>
+                </ngu-carousel>
+            </div>
+            <div class="information-container">
+                <h2> {{data.title}}</h2>
+                <span>{{data.subTitle}}</span>
+                <p> Mobile app allowing users to listen to Farsi Audiobooks in their native language </p>
+                <div class="button-container">
+                    <button (click)="viewSite()" *ngIf="data.url">View Site</button>
+                    <div *ngIf="!data.url"></div>
+                    <div (click)="closeFunc()" class="close-container1">
+                            <div class="close-button1">
+                                &#x2715;
+                            </div>
+                        </div>
+                </div>
+            </div>
+</section>

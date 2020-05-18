@@ -2,7 +2,8 @@
     <div [ngClass]="{'portfolio-popup' : type === modalTypes.PORTFOLIO ? true: false,
                 'about-popup': type === modalTypes.ABOUT ? true: false,
                 'resume-popup': type === modalTypes.RESUME ? true: false,
-                'contact-popup': type === modalTypes.CONTACT ? true: false
+                'contact-popup': type === modalTypes.CONTACT ? true: false,
+                'product-card-popup': type === modalTypes.PRODUCT_CARD ? true: false
             }" class="modal-popup-body">
         <ng-content></ng-content>
     </div>

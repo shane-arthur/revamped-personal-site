@@ -1,6 +1,9 @@
 
-export interface PortfolioItem{
+export interface PortfolioItem {
     imgSrc: string;
     technologies: string[],
     title: string;
+    subTitle: string;
+    id: string;
+    url?: string;
 }

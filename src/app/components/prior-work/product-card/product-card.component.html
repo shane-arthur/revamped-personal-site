@@ -13,7 +13,11 @@
                     <span> {{tech}} </span>
                 </ng-container>
             </div>
-            <button [@flyInTop]> Learn More </button>
+            <button (click)="openProductCard()" [@flyInTop]> Learn More </button>
         </div>
     </ng-template>
 </div>
+
+<modal-component [data]="item" [type]="'Product_Card'" [id]="popupId">
+        <modal-container [id]="popupId" [type]="'Product_Card'"></modal-container>
+    </modal-component>

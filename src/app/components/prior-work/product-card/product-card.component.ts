@@ -1,8 +1,9 @@
-import { Component, ViewChild, Input, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, Input, ElementRef, AfterViewInit, OnInit } from '@angular/core';
 import { PortfolioItem } from '../../../models/portfolio';
 import { fromEvent } from 'rxjs';
 import { tap, debounceTime } from 'rxjs/operators';
 import { Animations } from './animation';
+import { ModalService } from '../../../services/modal.service';
 
 
 @Component({
@@ -11,12 +12,18 @@ import { Animations } from './animation';
   styleUrls: ['./product-card.component.scss'],
   animations: [Animations.flyInBottom, Animations.flyInTop, Animations.fadeIn]
 })
-export class ProductCardComponent implements AfterViewInit {
+export class ProductCardComponent implements AfterViewInit, OnInit {
   @ViewChild('container', { static: false }) containerRef: ElementRef;
   @ViewChild('infoContainer', { static: false }) infoContainerRef: ElementRef;
   @Input() item: PortfolioItem;
   normalMode = true;
-  constructor() { }
+  popupId: string = '';
+  
+  constructor(private modalService: ModalService) { }
+
+  ngOnInit(){
+    this.popupId = `product-item-popup-${this.item.id}`;
+  }
 
   ngAfterViewInit(){
     fromEvent(this.containerRef.nativeElement, 'mouseleave').pipe(
@@ -28,8 +35,11 @@ export class ProductCardComponent implements AfterViewInit {
   }
 
   changeMode(isNormal: boolean){
-    console.log(isNormal);
     this.normalMode = isNormal;
+  }
+
+  openProductCard(){
+    this.modalService.open(this.popupId);
   }
 
 }
