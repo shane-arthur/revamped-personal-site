@@ -6,8 +6,8 @@
                     <img [src]="item" />
                 </div>
             </ngu-tile>
-                <button NguCarouselPrev class="leftRs">&lt;</button>
-                <button style="float:right" NguCarouselNext class="rightRs">&gt;</button>
+                <button *ngIf="data.images.length > 1" NguCarouselPrev class="leftRs">&lt;</button>
+                <button *ngIf="data.images.length > 1" style="float:right" NguCarouselNext class="rightRs">&gt;</button>
         </ngu-carousel>
     </div>
     <div class="information-container">

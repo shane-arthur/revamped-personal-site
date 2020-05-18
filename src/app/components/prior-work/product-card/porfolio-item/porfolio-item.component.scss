@@ -1,35 +1,33 @@
+@import '../../../../../assets/styles/layout/breakpoints';
+
 section {
     background-color: white;
     border: 1px solid black;
     border-radius: 5px;
-    .images-container {
-        img {
-            min-width: 325px;
-            max-width: 700px;
-            height: auto;
-        }
-    }
-    .information-container{
+
+    .information-container {
         margin-left: 5%;
         margin-right: 5%;
-        h2{
+
+        h2 {
             margin: 0;
-            font-size:2.0rem;
+            font-size: 2.0rem;
         }
-        span{
+
+        span {
             color: darkgray;
             text-transform: uppercase;
-            font-size:0.9rem;
+            font-size: 0.9rem;
             border-bottom: 1px solid darkgray;
             padding-bottom: 15px;
         }
 
-        p{
+        p {
             font-weight: lighter;
         }
 
-        .button-container{
-            display:flex;
+        .button-container {
+            display: flex;
             flex-direction: row;
             justify-content: space-between;
             margin-bottom: 10px;
@@ -38,14 +36,14 @@ section {
                 position: relative;
                 bottom: 0px;
                 right: 0px;
-            
+
                 .close-button1 {
                     position: absolute;
                     bottom: 10px;
                     right: 10px;
                     cursor: pointer;
                 }
-            
+
                 .close-button1:hover {
                     transform: scale(1.25);
                     color: #404040;
@@ -57,15 +55,22 @@ section {
                 background: #404040;
                 color: #ffffff !important;
                 font-weight: 100;
-                padding: 5px;
+                padding: 2.5px;
                 text-transform: uppercase;
                 border-radius: 6px;
                 display: inline-block;
                 transition: all 0.3s ease 0s;
-                width: 25%;
-                font-size: 1.1rem;
+                width: 40%;
+                font-size: 0.9rem;
+
+                @include mq-medium-min {
+                    width: 25%;
+                    font-size: 1.1rem;
+                    padding: 5px;
+                }
+
             }
-            
+
             button:hover {
                 color: darkgray !important;
                 font-weight: 700 !important;
@@ -87,23 +92,33 @@ section {
     }
 }
 
-        button{
-            font-weight: 400;
-            margin: 10px;
-            background-color: #868686;
-            color: white;
-            width: 50px;
-            height: 50px;
-            font-size: 2.0rem;
+button {
+    font-weight: 400;
+    margin: 10px;
+    background-color: #868686;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 2.0rem;
 }
 
-ngu-tile{
-    .image-container{
-        width:650px;
-        height:500px;
-        display:flex;
+ngu-tile {
+    .image-container {
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: auto;
+        height: auto;
+
+        img {
+            width: 350px;
+            height: auto;
+
+            @include mq-large-med-min {
+                width: 650px;
+            }
+        }
+
     }
 }

@@ -7,7 +7,8 @@ const MODEL_TYPES = {
     ABOUT: 'About',
     RESUME: 'Resume',
     CONTACT: 'Contact',
-    PRODUCT_CARD: 'Product_Card'
+    PRODUCT_CARD: 'Product_Card',
+    PRIOR_WORK: 'Prior_Work'
 };
 
 @Component({

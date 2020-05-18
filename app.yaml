@@ -25,4 +25,14 @@ handlers:
   upload: dist/browser/assets/pdfs/(.*\.pdf)
   secure: always
 
+  - url: /(.*\.jpg)
+  static_files: dist/browser/\1
+  upload: dist/browser/assets/pdfs/(.*\.jpg)
+  secure: always
+
+  - url: /(.*\.png)
+  static_files: dist/browser/\1
+  upload: dist/browser/assets/pdfs/(.*\.png)
+  secure: always
+
 # [END runtime]

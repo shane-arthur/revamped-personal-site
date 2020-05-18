@@ -12,7 +12,7 @@ const componentMappings = {
   Portfolio: PortfolioComponent,
   Resume: ResumeComponent,
   Contact: ContactComponent,
-  PriorWork: PriorWorkComponent,
+  Prior_Work: PriorWorkComponent,
   Product_Card: PorfolioItemComponent
 };
 

@@ -8,7 +8,7 @@ import { PortfolioItem } from '../../../../models/portfolio';
   styleUrls: ['./porfolio-item.component.scss']
 })
 export class PorfolioItemComponent implements OnInit {
-  public carouselTileItems = [0,1];
+  public carouselTileItems = [];
   carouselSettings: any;
   id: string;
   data: PortfolioItem;
@@ -18,6 +18,7 @@ export class PorfolioItemComponent implements OnInit {
     const { data } = this.modalService.get(this.id);
     this.data = data;
     this.carouselTileItems = data.images;
+    console.log(this.carouselTileItems.length);
     this.carouselSettings = {
       grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
       slide: 1,

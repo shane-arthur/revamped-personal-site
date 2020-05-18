@@ -89,7 +89,17 @@ modal-component {
             margin-top: 2.5%;
 
             @include mq-large-min {
-                width: 35%;
+                width: 35%!important;
+                margin-bottom: 20px;
+            }
+        }
+
+        .prior-work-popup {
+            width: 100%;
+            margin-top: 2.5%;
+
+            @include mq-large-min {
+                width: 50%!important;
                 margin-bottom: 20px;
             }
         }
