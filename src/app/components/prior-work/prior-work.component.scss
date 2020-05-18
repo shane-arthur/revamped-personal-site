@@ -3,5 +3,11 @@ section{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    max-height:720px;
+    overflow-y:scroll;
+
+    app-product-card{
+        margin: 10px;
+    }
 
 }

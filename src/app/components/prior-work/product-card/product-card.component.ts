@@ -1,22 +1,28 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, ViewChild, Input, ElementRef, AfterViewInit } from '@angular/core';
+import { PortfolioItem } from '../../../models/portfolio';
+import { fromEvent } from 'rxjs';
+import { tap, debounceTime } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-product-card',
   templateUrl: './product-card.component.html',
   styleUrls: ['./product-card.component.scss']
 })
-export class ProductCardComponent implements OnInit {
-
-  @Input() imgSrc: string;
+export class ProductCardComponent implements AfterViewInit {
+  @ViewChild('container', { static: false }) containerRef: ElementRef;
+  @Input() item: PortfolioItem;
   normalMode = true;
   constructor() { }
 
-  ngOnInit() {
-    console.log('imgSrc', this.imgSrc);
+  ngAfterViewInit(){
+    fromEvent(this.containerRef.nativeElement, 'mouseout').pipe(
+      debounceTime(500),
+      tap(() => this.changeMode(true))
+    ).subscribe();
   }
 
   changeMode(isNormal: boolean){
-    console.log('isNormal', isNormal);
     this.normalMode = isNormal;
   }
 
