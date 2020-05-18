@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
       { title: 'About', url: 'About' },
       { title: 'Contact', url: 'Contact' },
       { title: 'Resume', url: 'Resume' },
-      { title: 'Prior Work', url: 'PriorWork' }
+      { title: 'Portfolio', url: 'PriorWork' }
     ]
   }
 

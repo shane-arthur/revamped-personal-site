@@ -1,5 +1,15 @@
-<section>
+
+<div class="page-container">
+ <div (click)="closeFunc()" class="close-container">
+        <div class="close-button">
+            &#x2715;
+        </div>
+    </div>
+
+<h2>Portfolio</h2>
+<section id="scrollbar">
     <ng-container *ngFor="let item of portfolioItems">
         <app-product-card [item]="item"></app-product-card>
     </ng-container>
 </section>
+</div>

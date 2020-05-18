@@ -1,13 +1,41 @@
-section{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    max-height:720px;
-    overflow-y:scroll;
+.page-container {
+    padding: 5px;
 
-    app-product-card{
-        margin: 10px;
+    .close-button {
+        right: 20px;
     }
 
+    h2 {
+        text-align: center;
+        font-size: 2.0rem;
+        margin-top: 2.5%;
+    }
+
+    section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-height: 720px;
+        overflow-y: scroll;
+
+        app-product-card {
+            margin: 10px;
+        }
+
+    }
+
+    #scrollbar::-webkit-scrollbar {
+        width: 10px;
+        background-color: #F5F5F5;
+    }
+
+    #scrollbar::-webkit-scrollbar-thumb {
+        background-color: #000000;
+    }
+
+    #scrollbar::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+        background-color: #F5F5F5;
+    }
 }

@@ -1,19 +1,19 @@
-<div #container class="card-container" (mouseover)="changeMode(false)">
+<div #container class="card-container">
     <ng-template [ngIf]="normalMode" [ngIfElse]="hovered">
-        <div class="template-container">
+        <div [@fadeIn] #container class="template-container">
             <img [src]="item.imgSrc" />
         </div>
     </ng-template>
 
     <ng-template #hovered>
         <div style="justify-content: space-evenly" class="template-container">
-            <div class="info-container">
+            <div [@flyInBottom] class="info-container">
                 <h2> {{item.title}}</h2>
                 <ng-container *ngFor="let tech of item.technologies">
                     <span> {{tech}} </span>
                 </ng-container>
             </div>
-            <button> Learn More </button>
+            <button [@flyInTop]> Learn More </button>
         </div>
     </ng-template>
 </div>

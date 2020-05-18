@@ -25,7 +25,6 @@ modal-component {
         .modal-popup-body {
             @include linear-gradient($shane-site-secondary-black, $shane-site-black);
             color: $shane-site-white;
-            padding: 20px;
             background: #fff;
             width: 85%;
             margin: 0 auto;

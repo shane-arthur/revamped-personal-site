@@ -1,5 +1,7 @@
 <div (click)="closeFunc()" class="close-container">
-    X
+    <div class="close-button">
+        &#x2715;
+    </div>
 </div>
 <div class="pdf-container">
     <div class="pdf-viewer-container">
@@ -18,10 +20,10 @@
                 <button [disabled]="currentPage === maxPages" (click)="onNextClick()">Next</button>
             </div>
             <div class="button-container">
-                    <button (click)="onPrevClick()" [disabled]="currentPage === 1">
-                        Prev
-                    </button>
-                </div>
+                <button (click)="onPrevClick()" [disabled]="currentPage === 1">
+                    Prev
+                </button>
+            </div>
         </div>
         <pdf-viewer [show-all]="false" [page]="currentPage" [zoom]="'0.4'" class="pdf-viewer" [src]="pdfSrc"
             [render-text]="true"></pdf-viewer>

@@ -1,6 +1,7 @@
 @import '../../../assets/styles/layout/breakpoints';
 
-div {
+.about-container {
+    padding: 5px;
     h2 {
         font-size: 1.2rem;
         text-align: center;
@@ -9,18 +10,6 @@ div {
             font-size: 2.0rem;
         }
 
-    }
-
-    .close-container {
-        float: right;
-        margin-top: -4%;
-        font-size: 1.5rem;
-        cursor: pointer;
-    }
-
-    .close-container:hover {
-        transform: scale(1.25);
-        color: red;
     }
 
     .info-container {
