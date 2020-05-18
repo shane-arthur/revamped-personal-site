@@ -8,24 +8,20 @@ import { PortfolioItem } from '../../../../models/portfolio';
   styleUrls: ['./porfolio-item.component.scss']
 })
 export class PorfolioItemComponent implements OnInit {
-  public carouselTileItems: Array<any> = [0, 1];
+  public carouselTileItems = [0,1];
   carouselSettings: any;
   id: string;
   data: PortfolioItem;
   constructor(private modalService: ModalService) { }
 
   ngOnInit() {
-
     const { data } = this.modalService.get(this.id);
     this.data = data;
+    this.carouselTileItems = data.images;
     this.carouselSettings = {
       grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
       slide: 1,
       speed: 400,
-      interval: {
-        timing: 3000,
-        initialDelay: 1000
-      },
       point: {
         visible: false
       },
@@ -35,11 +31,11 @@ export class PorfolioItemComponent implements OnInit {
     };
   }
 
-  closeFunc(){
+  closeFunc() {
     this.modalService.close(this.id)
   }
 
-  viewSite(){
+  viewSite() {
     window.open(this.data.url);
   }
 

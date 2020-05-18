@@ -6,4 +6,6 @@ export interface PortfolioItem {
     subTitle: string;
     id: string;
     url?: string;
+    images?: string[];
+    description: string;
 }
