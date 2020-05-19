@@ -18,7 +18,6 @@ export class PorfolioItemComponent implements OnInit {
     const { data } = this.modalService.get(this.id);
     this.data = data;
     this.carouselTileItems = data.images;
-    console.log(this.carouselTileItems.length);
     this.carouselSettings = {
       grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
       slide: 1,
