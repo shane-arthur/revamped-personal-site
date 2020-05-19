@@ -114,6 +114,7 @@ ngu-tile {
         img {
             width: 350px;
             height: auto;
+            border-radius:10px;
 
             @include mq-large-med-min {
                 width: 475px;

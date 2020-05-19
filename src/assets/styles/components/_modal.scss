@@ -99,9 +99,14 @@ modal-component {
             margin-top: 2.5%;
 
             @include mq-large-min {
-                width: 50%!important;
+                width: 60% !important;
                 margin-bottom: 20px;
             }
+
+            @include mq-large-med-min{
+                width: 50%!important;
+            }
+
         }
 
     }
