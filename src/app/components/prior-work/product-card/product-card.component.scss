@@ -8,10 +8,10 @@
    @extend .flex-container;
 
     .template-container{
-        width: 390px;
+        width: 375px;
         min-height:300px;
         border-radius: 10px;
-        background-color: white;
+        background-color: transparent;
         color: black;
         @extend .flex-container;
 
@@ -23,7 +23,7 @@
         img{
             border-radius: 10px;
             height: auto;
-            width: 390px;
+            width: 375px;
         }
 
         .info-container{

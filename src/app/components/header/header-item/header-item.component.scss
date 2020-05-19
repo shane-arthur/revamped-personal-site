@@ -5,13 +5,16 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 6em;
+  width: 4rem;
   font-size: 1.0rem;
   cursor: pointer;
 
-  @include mq-large-min {
-    width: 15rem;
-    font-size: 1.4rem;
+  @include mq-medium-min{
+    width: 8rem;
+  }
+
+  @include mq-large-min{
+    width: 12rem;
   }
 
   nav:first-child {
