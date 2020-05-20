@@ -9,7 +9,7 @@ import { Animations } from './animation';
   animations: [Animations.numberChanged]
 })
 export class ResumeComponent {
-  pdfSrc = '/assets/pdfs/resume7.pdf';
+  pdfSrc = '/assets/pdfs/resume8.pdf';
   currentPage = 1;
   maxPages = 2;
   constructor(private modalService: ModalService) { }
