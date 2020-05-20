@@ -1,0 +1,64 @@
+.flex-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-container{
+   @extend .flex-container;
+
+    .template-container{
+        width: 375px;
+        min-height:300px;
+        border-radius: 10px;
+        background-color: transparent;
+        color: black;
+        @extend .flex-container;
+
+        .image-container{
+           @extend .flex-container;
+           align-items: center;
+        }
+
+        img{
+            border-radius: 10px;
+            height: auto;
+            width: 375px;
+        }
+
+        .info-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2{
+                margin: 0;
+            }
+
+            span{
+                color: darkgray;
+                display: block;
+            }
+
+        }
+
+        button{
+            font-size: 1.2rem;
+            width: 35%;
+            margin: 0 auto;
+            padding: 5px 10px 5px 10px;
+            border-radius: 5px;
+            background-color: white;
+            border: 2px solid black;
+            text-transform: uppercase;
+        }
+
+        button:hover{
+            background-color: black;
+            color: white;
+        }
+
+
+    }
+
+}

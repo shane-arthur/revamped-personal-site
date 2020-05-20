@@ -1,0 +1,23 @@
+<div #container class="card-container">
+    <ng-template [ngIf]="normalMode" [ngIfElse]="hovered">
+        <div [@fadeIn] #container class="template-container">
+            <img [src]="item.imgSrc" />
+        </div>
+    </ng-template>
+
+    <ng-template #hovered>
+        <div style="justify-content: space-evenly; background-color:white" class="template-container">
+            <div [@flyInBottom] class="info-container">
+                <h2> {{item.title}}</h2>
+                <ng-container *ngFor="let tech of item.technologies">
+                    <span> {{tech}} </span>
+                </ng-container>
+            </div>
+            <button (click)="openProductCard()" [@flyInTop]> Learn More </button>
+        </div>
+    </ng-template>
+</div>
+
+<modal-component [data]="item" [type]="'Product_Card'" [id]="popupId">
+        <modal-container [id]="popupId" [type]="'Product_Card'"></modal-container>
+    </modal-component>

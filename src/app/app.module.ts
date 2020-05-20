@@ -14,10 +14,13 @@ import { DynamicComponentDirective } from './directives/dynamic-component.direct
 import { AboutComponent } from './components/about/about.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ResumeComponent } from './components/resume/resume.component';
+import { PriorWorkComponent } from './components/prior-work/prior-work.component';
+import { ProductCardComponent } from './components/prior-work/product-card/product-card.component';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { HttpClientModule } from '@angular/common/http';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { ContactComponent } from './components/contact/contact.component';
+import { PorfolioItemComponent } from './components/prior-work/product-card/porfolio-item/porfolio-item.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppShellNoRenderDirective } from './directives/app-shell-no-render.directive';
 import { AppShellRenderDirective } from './directives/app-shell-render.directive';
@@ -39,7 +42,10 @@ import { NguCarouselModule } from '@ngu/carousel';
     ResumeComponent,
     ContactComponent,
     AppShellNoRenderDirective,
-    AppShellRenderDirective
+    AppShellRenderDirective, 
+    PriorWorkComponent,
+    ProductCardComponent,
+    PorfolioItemComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -53,6 +59,6 @@ import { NguCarouselModule } from '@ngu/carousel';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [AboutComponent, PortfolioComponent, ResumeComponent, ContactComponent]
+  entryComponents: [AboutComponent, PortfolioComponent, ResumeComponent, ContactComponent, PriorWorkComponent, PorfolioItemComponent]
 })
 export class AppModule { }

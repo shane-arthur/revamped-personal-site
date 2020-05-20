@@ -6,7 +6,9 @@ const MODEL_TYPES = {
     PORTFOLIO: 'Portfolio',
     ABOUT: 'About',
     RESUME: 'Resume',
-    CONTACT: 'Contact'
+    CONTACT: 'Contact',
+    PRODUCT_CARD: 'Product_Card',
+    PRIOR_WORK: 'Prior_Work'
 };
 
 @Component({
@@ -16,6 +18,7 @@ const MODEL_TYPES = {
 export class ModalComponent implements OnInit, OnDestroy {
     @Input() id: string;
     @Input() type: string;
+    @Input() data = null;
     modalTypes = MODEL_TYPES;
     private element: any;
 

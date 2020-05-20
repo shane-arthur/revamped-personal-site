@@ -25,7 +25,6 @@ modal-component {
         .modal-popup-body {
             @include linear-gradient($shane-site-secondary-black, $shane-site-black);
             color: $shane-site-white;
-            padding: 20px;
             background: #fff;
             width: 85%;
             margin: 0 auto;
@@ -83,6 +82,31 @@ modal-component {
                 width: 35%;
                 margin-bottom: 20px;
             }
+        }
+
+        .product-card-popup {
+            width: 100%;
+            margin-top: 2.5%;
+
+            @include mq-large-min {
+                width: 35%!important;
+                margin-bottom: 20px;
+            }
+        }
+
+        .prior-work-popup {
+            width: 100%;
+            margin-top: 2.5%;
+
+            @include mq-large-min {
+                width: 60% !important;
+                margin-bottom: 20px;
+            }
+
+            @include mq-large-med-min{
+                width: 50%!important;
+            }
+
         }
 
     }

@@ -1,0 +1,27 @@
+<section>
+    <div class="images-container">
+        <ngu-carousel [dataSource]="carouselTileItems" [inputs]="carouselSettings">
+            <ngu-tile #myCarousel *nguCarouselDef="let item; let j = index">
+                <div class="image-container">
+                    <img [src]="item" />
+                </div>
+            </ngu-tile>
+                <button *ngIf="data.images.length > 1" NguCarouselPrev class="leftRs">&lt;</button>
+                <button *ngIf="data.images.length > 1" style="float:right" NguCarouselNext class="rightRs">&gt;</button>
+        </ngu-carousel>
+    </div>
+    <div class="information-container">
+        <h2> {{data.title}}</h2>
+        <span>{{data.subTitle}}</span>
+        <p> {{data.description}} </p>
+        <div class="button-container">
+            <button (click)="viewSite()" *ngIf="data.url">View Site</button>
+            <div *ngIf="!data.url"></div>
+            <div (click)="closeFunc()" class="close-container1">
+                <div class="close-button1">
+                    &#x2715;
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,5 +1,7 @@
 <div (click)="closeFunc()" class="close-container">
-    X
+    <div class="close-button">
+        &#x2715;
+    </div>
 </div>
 <div class="pdf-container">
     <div class="pdf-viewer-container">
@@ -10,7 +12,7 @@
                 </div>
             </div>
             <div class="button-container">
-                <a href='../../../assets/pdfs/resume4.pdf' download="shane_arthur_resume_2019">
+                <a href='../../../assets/pdfs/resume5.pdf' download="shane_arthur_resume_2019">
                     <button> Download </button>
                 </a>
             </div>
@@ -18,10 +20,10 @@
                 <button [disabled]="currentPage === maxPages" (click)="onNextClick()">Next</button>
             </div>
             <div class="button-container">
-                    <button (click)="onPrevClick()" [disabled]="currentPage === 1">
-                        Prev
-                    </button>
-                </div>
+                <button (click)="onPrevClick()" [disabled]="currentPage === 1">
+                    Prev
+                </button>
+            </div>
         </div>
         <pdf-viewer [show-all]="false" [page]="currentPage" [zoom]="'0.4'" class="pdf-viewer" [src]="pdfSrc"
             [render-text]="true"></pdf-viewer>
@@ -32,7 +34,7 @@
         Please view this page on a desktop or:
     </h2>
     <div class="button-container">
-        <a href='../../../assets/pdfs/resume4.pdf' download="shane_arthur_resume_2019">
+        <a href='../../../assets/pdfs/resume5.pdf' download="shane_arthur_resume_2019">
             <button> Download </button>
         </a>
     </div>

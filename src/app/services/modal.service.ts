@@ -25,4 +25,10 @@ export class ModalService {
         let modal: any = this.modals.filter(x => x.id === id)[0];
         modal.close();
     }
+
+    get(id: string){
+        const idx = this.modals.findIndex(item => item.id === id);
+        return idx !== -1 ? this.modals[idx] : null;
+    }
+
 }

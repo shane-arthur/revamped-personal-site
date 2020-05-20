@@ -4,12 +4,16 @@ import { AboutComponent } from '../components/about/about.component';
 import { PortfolioComponent } from '../components/portfolio/portfolio.component';
 import { ResumeComponent } from '../components/resume/resume.component';
 import { ContactComponent } from '../components/contact/contact.component';
+import { PriorWorkComponent } from '../components/prior-work/prior-work.component';
+import { PorfolioItemComponent } from '../components/prior-work/product-card/porfolio-item/porfolio-item.component';
 
 const componentMappings = {
   About: AboutComponent,
   Portfolio: PortfolioComponent,
   Resume: ResumeComponent,
-  Contact: ContactComponent
+  Contact: ContactComponent,
+  Prior_Work: PriorWorkComponent,
+  Product_Card: PorfolioItemComponent
 };
 
 @Component({
@@ -21,6 +25,7 @@ const componentMappings = {
 })
 export class ModalContainerComponent implements OnChanges {
   @Input() type: string;
+  @Input() id: string = null;
   @ViewChild(DynamicComponentDirective, { static: true }) componentHost: DynamicComponentDirective;
   constructor(
     private componentFactoryResolver: ComponentFactoryResolver
@@ -37,7 +42,9 @@ export class ModalContainerComponent implements OnChanges {
     const componentFactory =  this.componentFactoryResolver.resolveComponentFactory(component);
     const viewContainerRef = this.componentHost.viewContainerRef;
     viewContainerRef.clear();
-    viewContainerRef.createComponent(componentFactory);
+    const item = viewContainerRef.createComponent(componentFactory);
+    item.instance['id'] = this.id;
+
   }
 }
 
