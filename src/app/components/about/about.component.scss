@@ -85,23 +85,21 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    margin: 5px;
+                    width: 35%;
 
                     img {
-                        height: 33px;
-                        width: 33px;
+                        height: 100px;
+                        width: 40px;
                         margin: 0 auto;
 
                         @include mq-large-min {
-                            height: 44px;
-                            width: 44px;
+                            height: 75px;
+                            width: 45px;
                         }
+
                     }
-
                 }
-
             }
-
         }
     }
 }
