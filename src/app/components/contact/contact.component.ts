@@ -33,7 +33,6 @@ export class ContactComponent implements OnInit {
 
   closeFunc() {
     this.isSucess = false;
-    this.sending = false;
     this.isError = false;
     this.modalService.close('item-popup');
   }
@@ -49,25 +48,29 @@ export class ContactComponent implements OnInit {
 
   onSubmit(e) {
     e.preventDefault();
+    this.sending = true;
     const data: IEmail = this.emailFormGroup.value;
     this.emailService.sendEmail(data).pipe(
       catchError((err) => {
         console.log(err);
         this.isError = true;
-        return of(err)
+        return of(err);
       }),
       tap(() => {
-        if (!this.isError){
-        console.log('successfully submitted email');
-        this.isSucess = true;
-        this.sending = true;
-        this.emailFormGroup.reset();
+        if (!this.isError) {
+          console.log('successfully submitted email');
+          this.isSucess = true;
+          this.sending = true;
         }
       }),
-      delay(5000),
-      tap(() =>  this.closeFunc()),
+      delay(1750),
+      tap(() => {
+        this.sending = false;
+        this.closeFunc();
+        this.emailFormGroup.reset();
+      }
+      ),
       take(1)
-    ).subscribe()
+    ).subscribe();
   }
-
 }
