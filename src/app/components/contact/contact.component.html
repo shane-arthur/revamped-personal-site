@@ -40,7 +40,9 @@
         </span>
         </div>
 
-        <button [ngClass]="{'active-button': emailFormGroup.valid}" [disabled]="!emailFormGroup.valid && !isDisabled"> Send Message </button>
+        <button [ngClass]="{'active-button': emailFormGroup.valid}" [disabled]="!emailFormGroup.valid && !isDisabled"> 
+            <img *ngIf="sending" src="../../../assets/images/spinner.gif"/>
+            <ng-container *ngIf="!sending">Send Message</ng-container></button>
 
         <div class="submit-email-message"> 
         <span class="sucess" *ngIf="isSucess">

@@ -14,6 +14,7 @@ import { tap, take, delay } from 'rxjs/operators';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  sending = false;
   emailFormGroup: FormGroup;
   isSucess: boolean = false;
   isError: boolean = false;
@@ -32,6 +33,7 @@ export class ContactComponent implements OnInit {
 
   closeFunc() {
     this.isSucess = false;
+    this.sending = false;
     this.isError = false;
     this.modalService.close('item-popup');
   }
@@ -58,6 +60,7 @@ export class ContactComponent implements OnInit {
         if (!this.isError){
         console.log('successfully submitted email');
         this.isSucess = true;
+        this.sending = true;
         this.emailFormGroup.reset();
         }
       }),
