@@ -1,4 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { fromEvent } from 'rxjs';
+import { tap, take } from 'rxjs/operators';
 
 interface IHeaderItems {
   title: string;
@@ -10,8 +12,10 @@ interface IHeaderItems {
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterViewInit {
   @Output() headerItemClicked = new EventEmitter();
+  @Output() loadProfileImages = new EventEmitter();
+  @ViewChild('header', { static: false }) headerElement: ElementRef;
   headerItems: IHeaderItems[] = null;
   constructor() { }
 
@@ -22,12 +26,23 @@ export class HeaderComponent implements OnInit {
       { title: 'Contact', url: 'Contact' },
       { title: 'Resume', url: 'Resume' },
       { title: 'Portfolio', url: 'Prior_Work' }
-    ]
+    ];
+  }
+
+  ngAfterViewInit(){
+    this._mouseHoverListen();
   }
 
   headerItemClickedFunc($event) {
     const { url } = $event;
     this.headerItemClicked.emit({ url });
+  }
+
+  private _mouseHoverListen() {
+    fromEvent(this.headerElement.nativeElement, 'mouseenter').pipe(
+      tap(() => this.loadProfileImages.emit()),
+      take(1)
+    ).subscribe();
   }
 
 }

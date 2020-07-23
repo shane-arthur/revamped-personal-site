@@ -1,4 +1,4 @@
-<header>
+<header #header>
     <ng-container *ngFor="let item of headerItems">
         <header-item (headerItemClicked)="headerItemClickedFunc($event)" [url]="item.url" [title]="item.title">
         </header-item>

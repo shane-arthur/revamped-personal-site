@@ -1,8 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { ModalService } from './services/modal.service';
-import { of } from 'rxjs';
-import { delay, tap, take } from 'rxjs/operators';
-
+import { ImagePreloadService } from './services/image-preload.service';
 
 @Component({
   selector: 'app-root',
@@ -14,27 +12,21 @@ export class AppComponent implements AfterViewInit {
   smallPopup = false;
   popupType: string;
   preloadedImageUrl: string;
-  constructor(private modalService: ModalService) {
-
+  constructor(private modalService: ModalService, private imageService: ImagePreloadService) {
   }
 
   ngAfterViewInit() {
-    this._populatePreloadedImages();
-  }
-
-  private _populatePreloadedImages() {
-    const firstPersonalImage = '../assets/images/shane.png';
-    of(['dummyValue']).pipe(
-      delay(0),
-      tap(() => this.preloadedImageUrl = firstPersonalImage),
-      take(1)
-    ).subscribe();
+    this.imageService.preloadAboutImages();
   }
 
   headerItemClicked($event) {
     const { url } = $event;
     this.popupType = url;
     this.modalService.open('item-popup');
+  }
+
+  loadProfileImages() {
+    this.imageService.preloadProfileImages();
   }
 
 }
