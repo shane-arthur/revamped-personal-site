@@ -8,7 +8,8 @@ export class ImagePreloadService {
   aboutImgSrcs = ['/assets/images/shane.png', '/assets/images/shane2.jpg'];
 
   profileImgSrcs = ['/assets/images/maktub-app.jpg', '/assets/images/agr-app.png',
-  '/assets/images/tread2go.png', '/assets/images/raly.png', '/assets/images/lastcall.png', '/assets/images/predikat.png'];
+  '/assets/images/tread2go.png', '/assets/images/raly.png', '/assets/images/lastcall.png', '/assets/images/predikat.png', 
+  '/assets/pdfs/resume12.pdf'];
 
   constructor() { }
 
