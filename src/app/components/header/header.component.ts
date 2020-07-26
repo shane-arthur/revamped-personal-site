@@ -15,7 +15,7 @@ interface IHeaderItems {
 export class HeaderComponent implements OnInit, AfterViewInit {
   @Output() headerItemClicked = new EventEmitter();
   @Output() loadProfileImages = new EventEmitter();
-  @ViewChild('header', { static: false }) headerElement: ElementRef;
+  @ViewChild('header') headerElement: ElementRef;
   headerItems: IHeaderItems[] = null;
   constructor() { }
 

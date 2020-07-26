@@ -60,8 +60,7 @@ import { NguCarouselModule } from '@ngu/carousel';
     NguCarouselModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: [AboutComponent, PortfolioComponent, ResumeComponent, ContactComponent, 
-    PriorWorkComponent, PorfolioItemComponent, MapComponent]
+  bootstrap: [AppComponent]
+  
 })
 export class AppModule { }
