@@ -26,6 +26,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppShellNoRenderDirective } from './directives/app-shell-no-render.directive';
 import { AppShellRenderDirective } from './directives/app-shell-render.directive';
 import { NguCarouselModule } from '@ngu/carousel';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { NguCarouselModule } from '@ngu/carousel';
     HttpClientModule,
     PdfViewerModule,
     ReactiveFormsModule,
-    NguCarouselModule
+    NguCarouselModule,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -69,7 +69,7 @@ modal-component {
                 margin-top: 2%;
             }
 
-            @include mq-large-med-min{
+            @include mq-large-med-min {
                 width: 65%;
             }
         }
@@ -89,7 +89,7 @@ modal-component {
             margin-top: 2.5%;
 
             @include mq-large-min {
-                width: 35%!important;
+                width: 35% !important;
                 margin-bottom: 20px;
             }
         }
@@ -103,10 +103,16 @@ modal-component {
                 margin-bottom: 20px;
             }
 
-            @include mq-large-med-min{
-                width: 55%!important;
+            @include mq-large-med-min {
+                width: 55% !important;
             }
 
+        }
+
+        .places-popup {
+            width: 25%;
+            height: auto;
+            border-radius: 30px;
         }
 
     }

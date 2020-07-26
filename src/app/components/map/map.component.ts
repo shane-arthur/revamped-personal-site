@@ -1,5 +1,6 @@
-import {Component, ViewChild} from '@angular/core';
-import {MapInfoWindow, MapMarker} from '@angular/google-maps';
+import { Component, ViewChild, Inject, PLATFORM_ID } from '@angular/core';
+import { MapInfoWindow, MapMarker } from '@angular/google-maps';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-map',
@@ -8,29 +9,40 @@ import {MapInfoWindow, MapMarker} from '@angular/google-maps';
 })
 export class MapComponent {
 
- @ViewChild(MapInfoWindow, {static: false}) infoWindow: MapInfoWindow;
+  center: google.maps.LatLngLiteral;
+  markerPositions: google.maps.LatLngLiteral[];
+  markerOptions: google.maps.MarkerOptions[];
+  zoom: number;
+  constructor(@Inject(PLATFORM_ID) private platformId) {
 
-  center = {lat: 24, lng: 12};
-  markerOptions = {draggable: false};
-  markerPositions: google.maps.LatLngLiteral[] = [];
-  zoom = 4;
-  display?: google.maps.LatLngLiteral;
-
-  addMarker(event: google.maps.MouseEvent) {
-    this.markerPositions.push(event.latLng.toJSON());
   }
 
-  move(event: google.maps.MouseEvent) {
-    this.display = event.latLng.toJSON();
-  }
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      if (window.navigator) {
+        navigator.geolocation.getCurrentPosition(position => {
+          this.center = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          }
+        });
+      }
+    }
 
-  openInfoWindow(marker: MapMarker) {
-    this.infoWindow.open(marker);
+    this.zoom = 3;
+    this.markerPositions = [{
+      lat: 47.5738,
+      lng: -52.7329
+    }, {
+      lat: 44.6501,
+      lng: -63.5767
+    },
+    {
+      lat: 51.110802,
+      lng: -114.039032
+    }];
+    this.markerOptions = [{ draggable: false, icon: '/assets/images/mun.jpg' },
+    { draggable: false, icon: '/assets/images/ntt.jpg' }, { draggable: false, icon: '/assets/images/safeway.jpg' }];
   }
-
-  removeLastMarker() {
-    this.markerPositions.pop();
-  }
-
 }
 
