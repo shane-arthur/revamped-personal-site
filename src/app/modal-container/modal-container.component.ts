@@ -6,6 +6,7 @@ import { ResumeComponent } from '../components/resume/resume.component';
 import { ContactComponent } from '../components/contact/contact.component';
 import { PriorWorkComponent } from '../components/prior-work/prior-work.component';
 import { PorfolioItemComponent } from '../components/prior-work/product-card/porfolio-item/porfolio-item.component';
+import { MapComponent } from '../components/map/map.component';
 
 const componentMappings = {
   About: AboutComponent,
@@ -13,7 +14,8 @@ const componentMappings = {
   Resume: ResumeComponent,
   Contact: ContactComponent,
   Prior_Work: PriorWorkComponent,
-  Product_Card: PorfolioItemComponent
+  Product_Card: PorfolioItemComponent,
+  Places: MapComponent
 };
 
 @Component({

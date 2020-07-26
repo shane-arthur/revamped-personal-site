@@ -13,6 +13,7 @@ import { ModalContainerComponent } from './modal-container/modal-container.compo
 import { DynamicComponentDirective } from './directives/dynamic-component.directive';
 import { AboutComponent } from './components/about/about.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { MapComponent } from './components/map/map.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { PriorWorkComponent } from './components/prior-work/prior-work.component';
 import { ProductCardComponent } from './components/prior-work/product-card/product-card.component';
@@ -45,7 +46,8 @@ import { NguCarouselModule } from '@ngu/carousel';
     AppShellRenderDirective, 
     PriorWorkComponent,
     ProductCardComponent,
-    PorfolioItemComponent
+    PorfolioItemComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -59,6 +61,7 @@ import { NguCarouselModule } from '@ngu/carousel';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [AboutComponent, PortfolioComponent, ResumeComponent, ContactComponent, PriorWorkComponent, PorfolioItemComponent]
+  entryComponents: [AboutComponent, PortfolioComponent, ResumeComponent, ContactComponent, 
+    PriorWorkComponent, PorfolioItemComponent, MapComponent]
 })
 export class AppModule { }

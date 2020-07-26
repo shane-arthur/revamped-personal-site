@@ -69,7 +69,7 @@ section {
             }
         }
 
-        .linkedin-container {
+        .linkedin-container, .leetcode-container {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -83,7 +83,7 @@ section {
                 }
             }
         }
-
+        .leetcode-container:hover,
         .github-container:hover,
         .linkedin-container:hover {
             @extend .hover;

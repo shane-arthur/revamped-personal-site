@@ -15,7 +15,10 @@ export class PortfolioComponent {
   }
 
   openLink(type) {
-    const mappings = { github: 'https://github.com/shane-arthur', linkedIn: 'https://www.linkedin.com/in/shane-arthur-8b902071' }
+    const mappings = {
+      github: 'https://github.com/shane-arthur', linkedIn: 'https://www.linkedin.com/in/shane-arthur-8b902071',
+      leetcode: 'https://leetcode.com/shane-arthur'
+    }
     window.open(mappings[type]);
   }
 

@@ -21,6 +21,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.headerItems = [
+      { title: 'Places', url: 'Places' },
       { title: 'Links', url: 'Portfolio' },
       { title: 'About', url: 'About' },
       { title: 'Contact', url: 'Contact' },
