@@ -1,6 +1,8 @@
 import { Component, ViewChild, Inject, PLATFORM_ID } from '@angular/core';
 import { MapInfoWindow, MapMarker } from '@angular/google-maps';
 import { isPlatformBrowser } from '@angular/common';
+import { MapService } from '../../services/map.service';
+import { ModalService } from '../../services/modal.service';
 
 @Component({
   selector: 'app-map',
@@ -8,13 +10,18 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrls: ['./map.component.scss']
 })
 export class MapComponent {
-
+  @ViewChild(MapInfoWindow, { static: false }) infoWindow: MapInfoWindow;
   center: google.maps.LatLngLiteral;
   markerPositions: google.maps.LatLngLiteral[];
   markerOptions: google.maps.MarkerOptions[];
+  infoWindows: any[];
+  selectedInfoWindow: any = { position: null, title: null, range: null };
   zoom: number;
-  constructor(@Inject(PLATFORM_ID) private platformId) {
+  constructor(@Inject(PLATFORM_ID) private platformId, private mapService: MapService, private modalService: ModalService) {
+  }
 
+  closeFunc() {
+    this.modalService.close('item-popup');
   }
 
   ngOnInit() {
@@ -28,21 +35,15 @@ export class MapComponent {
         });
       }
     }
+    const { zoom, markerPositions, markerOptions, infoWindows } = this.mapService.initMap();
+    this.zoom = zoom;
+    this.markerPositions = markerPositions;
+    this.markerOptions = markerOptions;
+    this.infoWindows = infoWindows;
+  }
 
-    this.zoom = 3;
-    this.markerPositions = [{
-      lat: 47.5738,
-      lng: -52.7329
-    }, {
-      lat: 44.6501,
-      lng: -63.5767
-    },
-    {
-      lat: 51.110802,
-      lng: -114.039032
-    }];
-    this.markerOptions = [{ draggable: false, icon: '/assets/images/mun.jpg' },
-    { draggable: false, icon: '/assets/images/ntt.jpg' }, { draggable: false, icon: '/assets/images/safeway.jpg' }];
+  openInfoWindow(marker: MapMarker, index: number) {
+    this.selectedInfoWindow = this.infoWindows[index];
+    this.infoWindow.open(marker);
   }
 }
-

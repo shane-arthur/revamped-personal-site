@@ -27,6 +27,7 @@ import { AppShellNoRenderDirective } from './directives/app-shell-no-render.dire
 import { AppShellRenderDirective } from './directives/app-shell-render.directive';
 import { NguCarouselModule } from '@ngu/carousel';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { InfoWindowComponent } from './components/map/info-window/info-window.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
     PriorWorkComponent,
     ProductCardComponent,
     PorfolioItemComponent,
-    MapComponent
+    MapComponent,
+    InfoWindowComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
