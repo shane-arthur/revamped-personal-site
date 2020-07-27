@@ -2,8 +2,9 @@
     <div (click)="closeFunc()" class="close-button">
         &#x2715;
     </div>
+    <div class="message">I move around alot. Here are some places I've called home in the last decade.</div>
     <div class="map-container">
-        <google-map [zoom]="zoom" [center]="center">
+        <google-map width="375px" [zoom]="zoom" [center]="center">
 
             <ng-container *ngFor="let markerPosition of markerPositions; let i = index;">
                 <map-marker #marker="mapMarker" [position]="markerPosition" [options]="markerOptions[i]"

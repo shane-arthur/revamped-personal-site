@@ -6,7 +6,7 @@ import { markers} from '../services/map.service.config';
 })
 export class MapService {
   dataMap = new Map();
-  zoomLevel = 3;
+  zoomLevel = 2;
   constructor() { }
 
   initMap() {
