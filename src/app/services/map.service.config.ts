@@ -40,5 +40,19 @@ export const markers = [
             position: 'Web Application Developer',
             range: 'Oct.2014 - Jan.2015'
         }
+    },
+    {
+        name: 'GNX',
+        lat: 45.9609,
+        lng: -66.6427,
+        marker: {
+            draggable: false,
+            icon: '/assets/images/gnx.jpg'
+        },
+        info: {
+            title: 'GreenNexxus',
+            position: 'Web Application Developer',
+            range: 'Mar.2013 - July.2014'
+        }
     }
 ]
