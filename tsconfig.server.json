@@ -2,7 +2,8 @@
   "extends": "./tsconfig.app.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app-server",
-    "target": "es2016"
+    "target": "es2016",
+    "experimentalDecorators": true
 },
   "files": [
     "src/main.server.ts"
