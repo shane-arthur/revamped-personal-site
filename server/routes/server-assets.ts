@@ -1,5 +1,5 @@
 import { join } from 'path';
-const DIST_FOLDER = join(process.cwd(), 'dist');
+const DIST_FOLDER = join(process.cwd(),'dist');
 import * as express from 'express';
 
 export default function (app) {
