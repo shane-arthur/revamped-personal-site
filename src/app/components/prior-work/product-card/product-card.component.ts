@@ -13,8 +13,8 @@ import { ModalService } from '../../../services/modal.service';
   animations: [Animations.flyInBottom, Animations.flyInTop, Animations.fadeIn]
 })
 export class ProductCardComponent implements AfterViewInit, OnInit {
-  @ViewChild('container', { static: false }) containerRef: ElementRef;
-  @ViewChild('infoContainer', { static: false }) infoContainerRef: ElementRef;
+  @ViewChild('container') containerRef: ElementRef;
+  @ViewChild('infoContainer') infoContainerRef: ElementRef;
   @Input() item: PortfolioItem;
   normalMode = true;
   popupId: string = '';

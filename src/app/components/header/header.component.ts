@@ -5,6 +5,7 @@ import { tap, take } from 'rxjs/operators';
 interface IHeaderItems {
   title: string;
   url: string;
+  hideMobile?: boolean;
 }
 
 @Component({
@@ -15,16 +16,17 @@ interface IHeaderItems {
 export class HeaderComponent implements OnInit, AfterViewInit {
   @Output() headerItemClicked = new EventEmitter();
   @Output() loadProfileImages = new EventEmitter();
-  @ViewChild('header', { static: false }) headerElement: ElementRef;
+  @ViewChild('header') headerElement: ElementRef;
   headerItems: IHeaderItems[] = null;
   constructor() { }
 
   ngOnInit() {
     this.headerItems = [
+      { title: 'Places', url: 'Places' },
       { title: 'Links', url: 'Portfolio' },
       { title: 'About', url: 'About' },
       { title: 'Contact', url: 'Contact' },
-      { title: 'Resume', url: 'Resume' },
+      { title: 'Resume', url: 'Resume', hideMobile: true },
       { title: 'Portfolio', url: 'Prior_Work' }
     ];
   }

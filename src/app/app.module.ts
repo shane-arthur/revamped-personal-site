@@ -13,6 +13,7 @@ import { ModalContainerComponent } from './modal-container/modal-container.compo
 import { DynamicComponentDirective } from './directives/dynamic-component.directive';
 import { AboutComponent } from './components/about/about.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { MapComponent } from './components/map/map.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { PriorWorkComponent } from './components/prior-work/prior-work.component';
 import { ProductCardComponent } from './components/prior-work/product-card/product-card.component';
@@ -25,6 +26,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppShellNoRenderDirective } from './directives/app-shell-no-render.directive';
 import { AppShellRenderDirective } from './directives/app-shell-render.directive';
 import { NguCarouselModule } from '@ngu/carousel';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { InfoWindowComponent } from './components/map/info-window/info-window.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,9 @@ import { NguCarouselModule } from '@ngu/carousel';
     AppShellRenderDirective, 
     PriorWorkComponent,
     ProductCardComponent,
-    PorfolioItemComponent
+    PorfolioItemComponent,
+    MapComponent,
+    InfoWindowComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -55,10 +60,11 @@ import { NguCarouselModule } from '@ngu/carousel';
     HttpClientModule,
     PdfViewerModule,
     ReactiveFormsModule,
-    NguCarouselModule
+    NguCarouselModule,
+    GoogleMapsModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: [AboutComponent, PortfolioComponent, ResumeComponent, ContactComponent, PriorWorkComponent, PorfolioItemComponent]
+  bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

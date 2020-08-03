@@ -51,7 +51,7 @@ modal-component {
         }
 
         .about-popup {
-            width: 75%;
+            width: 85%;
             margin-top: 5%;
 
             @include mq-large-min {
@@ -69,14 +69,14 @@ modal-component {
                 margin-top: 2%;
             }
 
-            @include mq-large-med-min{
+            @include mq-large-med-min {
                 width: 65%;
             }
         }
 
         .contact-popup {
-            width: 80%;
-            margin-top: 2.5%;
+            width: 90%;
+            transform: translateY(5%);
 
             @include mq-large-min {
                 width: 35%;
@@ -89,22 +89,38 @@ modal-component {
             margin-top: 2.5%;
 
             @include mq-large-min {
-                width: 35%!important;
+                width: 35% !important;
                 margin-bottom: 20px;
             }
         }
 
         .prior-work-popup {
-            width: 100%;
-            margin-top: 2.5%;
+            width: 90%;
+            transform: translateY(5%);
+            border-radius: 5px;
+            max-height: 650px;
+            overflow-y: scroll;
 
             @include mq-large-min {
                 width: 60% !important;
                 margin-bottom: 20px;
             }
 
-            @include mq-large-med-min{
-                width: 55%!important;
+            @include mq-large-med-min {
+                width: 55% !important;
+            }
+
+        }
+
+        .places-popup {
+            width: 90%;
+            height: auto;
+            border-radius: 5px;
+            transform: translateY(5%);
+
+            @include mq-large-min {
+                width: 40%;
+                margin: 0 auto;
             }
 
         }

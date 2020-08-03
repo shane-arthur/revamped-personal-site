@@ -59,7 +59,7 @@ section {
                 height: 75px;
                 width: 75px;
                 background-size: 75px;
-                background-image: url('../../../assets/images/github.svg');
+                background-image: url('/assets/images/github.svg');
 
                 @include mq-large-min {
                     height: 150px;
@@ -69,7 +69,7 @@ section {
             }
         }
 
-        .linkedin-container {
+        .linkedin-container, .leetcode-container {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -83,7 +83,7 @@ section {
                 }
             }
         }
-
+        .leetcode-container:hover,
         .github-container:hover,
         .linkedin-container:hover {
             @extend .hover;

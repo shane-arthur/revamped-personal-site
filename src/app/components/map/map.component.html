@@ -1,0 +1,20 @@
+<div class="page-container">
+    <div (click)="closeFunc()" class="close-button">
+        &#x2715;
+    </div>
+    <div class="message">I move around alot. Here are some places I've called home in the last decade.</div>
+    <div class="map-container">
+        <google-map width="100%" [zoom]="zoom" [center]="center">
+
+            <ng-container *ngFor="let markerPosition of markerPositions; let i = index;">
+                <map-marker #marker="mapMarker" [position]="markerPosition" [options]="markerOptions[i]"
+                    (mapClick)="openInfoWindow(marker, i)"></map-marker>
+            </ng-container>
+            <map-info-window>
+                <app-info-window [title]="selectedInfoWindow.title" [position]="selectedInfoWindow.position"
+                    [range]="selectedInfoWindow.range">
+                </app-info-window>
+            </map-info-window>
+        </google-map>
+    </div>
+</div>
