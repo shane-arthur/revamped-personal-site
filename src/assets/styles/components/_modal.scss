@@ -51,7 +51,7 @@ modal-component {
         }
 
         .about-popup {
-            width: 75%;
+            width: 85%;
             margin-top: 5%;
 
             @include mq-large-min {
@@ -75,8 +75,8 @@ modal-component {
         }
 
         .contact-popup {
-            width: 80%;
-            margin-top: 2.5%;
+            width: 90%;
+            transform: translateY(5%);
 
             @include mq-large-min {
                 width: 35%;
@@ -95,8 +95,11 @@ modal-component {
         }
 
         .prior-work-popup {
-            width: 100%;
-            margin-top: 2.5%;
+            width: 90%;
+            transform: translateY(5%);
+            border-radius: 5px;
+            max-height: 650px;
+            overflow-y: scroll;
 
             @include mq-large-min {
                 width: 60% !important;
@@ -114,11 +117,12 @@ modal-component {
             height: auto;
             border-radius: 5px;
             transform: translateY(5%);
-        }
 
-        @include mq-large-min {
-            width: 40%;
-            margin: 0 auto;
+            @include mq-large-min {
+                width: 40%;
+                margin: 0 auto;
+            }
+
         }
 
     }

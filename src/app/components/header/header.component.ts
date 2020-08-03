@@ -5,6 +5,7 @@ import { tap, take } from 'rxjs/operators';
 interface IHeaderItems {
   title: string;
   url: string;
+  hideMobile?: boolean;
 }
 
 @Component({
@@ -25,7 +26,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
       { title: 'Links', url: 'Portfolio' },
       { title: 'About', url: 'About' },
       { title: 'Contact', url: 'Contact' },
-      { title: 'Resume', url: 'Resume' },
+      { title: 'Resume', url: 'Resume', hideMobile: true },
       { title: 'Portfolio', url: 'Prior_Work' }
     ];
   }

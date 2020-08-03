@@ -1,6 +1,23 @@
-<header #header>
+<!-- <header #header>
     <ng-container *ngFor="let item of headerItems">
         <header-item (headerItemClicked)="headerItemClickedFunc($event)" [url]="item.url" [title]="item.title">
         </header-item>
     </ng-container>
-</header>
+</header> -->
+
+<header #header>
+        <ng-container *ngFor="let item of headerItems">
+            <ng-container *ngIf="item.hideMobile else normalItem;">
+            <header-item [attr.hideMobile]="true" (headerItemClicked)="headerItemClickedFunc($event)" [url]="item.url" [title]="item.title">
+            </header-item>
+        </ng-container>
+
+        <ng-template #normalItem>
+                <header-item (headerItemClicked)="headerItemClickedFunc($event)" [url]="item.url"
+                    [title]="item.title">
+                </header-item>
+            </ng-template> 
+
+        </ng-container>
+    </header>
+    
