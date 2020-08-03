@@ -12,12 +12,14 @@ header{
         justify-content: flex-end;
     }
 }
-
 header { 
     header-item[hideMobile="true"]{
         display: none;
+
+        @include mq-medium-min{
+            display: inline;
+        }
+
     }
-    @include mq-medium-min{
-        display: inline-block;
-    }
+  
 }
