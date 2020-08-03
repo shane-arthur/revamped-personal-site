@@ -3,15 +3,17 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 4200",
+    "start:dev": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev:ssr": "ng run revamped-personal-site:serve-ssr",
     "serve:ssr": "node dist/server/main.js",
-    "build:ssr": "ng build --prod && ng run revamped-personal-site:server:production",
-    "prerender": "ng run revamped-personal-site:prerender"
+    "start": "node --trace-warnings --max-old-space-size=6144 dist/server/main",
+    "build:universal": "ng build --prod && ng run revamped-personal-site:server:production",
+    "prerender": "ng run revamped-personal-site:prerender",
+    "deploy" : "npm run build:universal && gcloud app deploy"
   },
   "private": true,
   "dependencies": {

@@ -18,13 +18,9 @@
 
     .message {
         transform: translateX(15px) translateY(15px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         font-size: 0.9rem;
-        width: 325px;
-        text-align: center;
+        width: 75%;
+        margin: 0 auto;
     }
 
 }

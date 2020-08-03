@@ -110,10 +110,15 @@ modal-component {
         }
 
         .places-popup {
-            width: 375px;
+            width: 90%;
             height: auto;
             border-radius: 5px;
             transform: translateY(5%);
+        }
+
+        @include mq-large-min {
+            width: 40%;
+            margin: 0 auto;
         }
 
     }
