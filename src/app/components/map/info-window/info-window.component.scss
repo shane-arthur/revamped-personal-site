@@ -1,27 +1,27 @@
-article{
+article {
     font-family: 'Oswald';
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: flex-start;
     color: black;
 
-    h4{
-        padding : 0;
+    h4 {
+        padding: 0;
         margin: 0;
         font-size: 0.9rem;
     }
 
-    span{
+    span {
         margin: 1px;
     }
 
-    span[name="range"]{
+    span[name="range"] {
         font-size: 0.6rem;
         font-style: italic;
         color: darkgray;
     }
 
-    span[name="position"]{
+    span[name="position"] {
         font-size: 0.8rem;
     }
 

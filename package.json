@@ -13,7 +13,7 @@
     "start": "node --trace-warnings --max-old-space-size=6144 dist/server/main",
     "build:universal": "ng build --prod && ng run revamped-personal-site:server:production",
     "prerender": "ng run revamped-personal-site:prerender",
-    "deploy" : "npm run build:universal && gcloud app deploy"
+    "deploy": "npm run build:universal && gcloud app deploy"
   },
   "private": true,
   "dependencies": {
