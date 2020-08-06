@@ -19,8 +19,6 @@ modal-component {
         /* z-index must be higher than .modal-popup-background */
         z-index: 1000;
 
-        /* enables scrolling for tall modals */
-        overflow: auto;
 
         .modal-popup-body {
             @include linear-gradient($shane-site-secondary-black, $shane-site-black);
@@ -96,15 +94,15 @@ modal-component {
 
         .prior-work-popup {
             width: 95%;
-            transform: translateY(5%);
+            transform: translateY(2%);
             border-radius: 10px;
-            max-height: 600px;
             overflow-y: hidden;
             margin-bottom: 25px;
 
             @include mq-large-min {
                 width: 60% !important;
                 margin-bottom: 20px;
+                transform: translateY(5%);
             }
 
             @include mq-large-med-min {

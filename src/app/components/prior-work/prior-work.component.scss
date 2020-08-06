@@ -18,12 +18,12 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        max-height: 600px;
         overflow-y: scroll;
         overflow-x:hidden;
+        max-height: 500px;
 
         @include mq-medium-min{
-            max-height: 720px;
+            max-height: 620px;
         }
 
     }
