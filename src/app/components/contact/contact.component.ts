@@ -18,6 +18,7 @@ export class ContactComponent implements OnInit {
   emailFormGroup: FormGroup;
   isSucess: boolean = false;
   isError: boolean = false;
+  isDisabled: boolean = false;
   constructor(private modalService: ModalService, private formBuilder: FormBuilder, private emailService: EmailService) { }
 
   get formControl(): any {
@@ -47,6 +48,7 @@ export class ContactComponent implements OnInit {
 
   onSubmit(e) {
     e.preventDefault();
+    this.isDisabled = true
     this.sending = true;
     const data: IEmail = this.emailFormGroup.value;
     this.emailService.sendEmail(data).pipe(
@@ -66,6 +68,7 @@ export class ContactComponent implements OnInit {
       tap(() => {
         this.sending = false;
         this.closeFunc();
+        this.isDisabled = false;
         this.emailFormGroup.reset();
       }
       ),
