@@ -1,4 +1,4 @@
-import { Component, OnInit, } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { interval } from 'rxjs';
 import { tap, take } from 'rxjs/operators';
 import { Meta, Title } from '@angular/platform-browser';
@@ -13,8 +13,9 @@ const robots = 'INDEX, FOLLOW';
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
-export class HomePageComponent implements OnInit {
+export class HomePageComponent implements OnInit, AfterViewInit {
 
+  @ViewChild('animateElement', {static: false}) animateElement: ElementRef;
   showProfession = false;
   constructor(private title: Title, private meta: Meta) { }
 
@@ -31,7 +32,28 @@ export class HomePageComponent implements OnInit {
     ).subscribe();
 
     this.setMetasAndTitle();
+  }
 
+  private moveElement(element){
+
+    const bounds = element.getBoundingClientRect();
+    const randomNumber = (high, low) => (Math.random() * ((high - low + 1) + (low)));
+
+    const start = performance.now();
+    move(performance.now());
+
+    function move(currentTime){
+        const amountToMove = randomNumber(bounds.width, 0);
+        element.style.transform = `translateX(${amountToMove}px)`;
+
+        requestAnimationFrame(move);
+    }
+
+  }
+
+  ngAfterViewInit(){
+    //const element = this.animateElement.nativeElement;
+    //this.moveElement(element);
   }
 
   private setMetasAndTitle() {

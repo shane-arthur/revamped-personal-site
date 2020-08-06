@@ -18,7 +18,6 @@ export class ContactComponent implements OnInit {
   emailFormGroup: FormGroup;
   isSucess: boolean = false;
   isError: boolean = false;
-  isDisabled: boolean = false;
   constructor(private modalService: ModalService, private formBuilder: FormBuilder, private emailService: EmailService) { }
 
   get formControl(): any {
