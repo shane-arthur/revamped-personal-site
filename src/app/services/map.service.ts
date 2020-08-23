@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { markers} from '../services/map.service.config';
+import { markers } from '../services/map.service.config';
 
 @Injectable({
   providedIn: 'root'

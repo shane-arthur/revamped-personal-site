@@ -19,6 +19,8 @@ modal-component {
         /* z-index must be higher than .modal-popup-background */
         z-index: 1000;
 
+        overflow: auto;
+
 
         .modal-popup-body {
             @include linear-gradient($shane-site-secondary-black, $shane-site-black);
