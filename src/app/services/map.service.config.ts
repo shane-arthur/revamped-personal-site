@@ -98,7 +98,7 @@ export const markers = [
         }
     },
     {
-        name: 'Avande',
+        name: 'Avande2',
         lat: 43.645859,
         lng: -79.387848,
         marker: {
@@ -122,7 +122,7 @@ export const markers = [
         info: {
             title: 'Home Depot Canada',
             position: 'UI Architect / Principal Frontend Engineer',
-            range: 'Sept.2018 - Present'
+            range: 'Nov.2017 - Apr.2018 & Sept.2018 - Present'
         }
     }
 ]
