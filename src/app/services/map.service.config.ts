@@ -96,5 +96,33 @@ export const markers = [
             position: 'Consultant',
             range: 'Jan.2016 - June.2016'
         }
+    },
+    {
+        name: 'Avande',
+        lat: 43.645859,
+        lng: -79.387848,
+        marker: {
+            draggable: false,
+            icon: '/assets/images/infusion.jpg'
+        },
+        info: {
+            title: 'Avande',
+            position: 'Consultant',
+            range: 'June.2016 - June.2017'
+        }
+    },
+    {
+        name: 'HDCA',
+        lat: 43.72869078,
+        lng: -79.3294382,
+        marker: {
+            draggable: false,
+            icon: '/assets/images/homedepot.jpg'
+        },
+        info: {
+            title: 'Home Depot Canada',
+            position: 'UI Architect / Principal Frontend Engineer',
+            range: 'Sept.2018 - Present'
+        }
     }
 ]
