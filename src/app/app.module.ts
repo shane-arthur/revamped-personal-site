@@ -28,6 +28,7 @@ import { AppShellRenderDirective } from './directives/app-shell-render.directive
 import { NguCarouselModule } from '@ngu/carousel';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { InfoWindowComponent } from './components/map/info-window/info-window.component';
+import { SeoPageComponent } from './components/seo-page/seo-page.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { InfoWindowComponent } from './components/map/info-window/info-window.co
     ProductCardComponent,
     PorfolioItemComponent,
     MapComponent,
-    InfoWindowComponent
+    InfoWindowComponent,
+    SeoPageComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

@@ -35,9 +35,9 @@ handlers:
   upload: dist/browser/assets/pdfs/(.*\.png)
   secure: always
 
-- url: /robots.txt
-  static_files: /robots.txt
-  upload: /robots.txt
+- url: /(.*\.txt)
+  static_files: dist/browser/\1
+  upload: dist/browser/(.*\.txt)
   secure: always
 
 # [END runtime]

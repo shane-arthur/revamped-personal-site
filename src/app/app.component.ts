@@ -10,7 +10,23 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit {
-
+  links = [];
+  tags = [];
+  title = 'Shane Arthur Personal Website';
+  JsonLDs: [
+    {
+      '@context': 'https://schema.org';
+      '@type': 'WebPage';
+      name: 'Shane Arthur Personal Website',
+      operatingSystem: 'Windows, Mac';
+      applicationCategory: 'https://schema.org/WebApplication',
+      offers: {
+        '@type': 'Offer';
+        price: '0';
+        priceCurrency: 'USD';
+      };
+    }
+  ];
   smallPopup = false;
   popupType: string;
   preloadedImageUrl: string;
@@ -33,4 +49,26 @@ export class AppComponent implements AfterViewInit {
     this.imageService.preloadProfileImages();
   }
 
+  private _setMetaTagsAndTitle(){
+    const currentUrl = 'https//shane-arthur.io';
+    this.tags = [
+      { property: 'og:title', content: 'Shane Arthur Personal Website'},
+      { name: 'title', content: this.title },
+      { name: 'twitter:title', content: this.title },
+      { property: 'og:site_name', content: this.title },
+      { property: 'og:url', content: currentUrl },
+      { property: 'og:image', content: 'https://shane-arthur.io/assets/images/shane2.jpg' },
+      { property: 'twitter:image', content: 'https://shane-arthur.io/assets/images/shane2.jpg' },
+      { property: 'og:type', content: 'profile' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'robots', content: 'INDEX, FOLLOW' }
+    ];
+
+    this.links = [
+      {
+        rel: 'canonical',
+        href: currentUrl
+      }
+    ];
+  }
 }
