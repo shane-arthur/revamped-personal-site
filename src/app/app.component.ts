@@ -49,8 +49,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       catchError(err => {
         return of(err);
       })
-    ).subscribe(res => {
-    })
+    ).subscribe();
   }
 
   ngAfterViewInit() {
