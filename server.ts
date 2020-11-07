@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 4000;
 enableProdMode();
 const app = express();
 
+require('./server/routes/error').default(app);
 require('./server/routes/server-config').default(app);
 require('./server/routes/send-email').default(app);
 require('./server/routes/serve-universal').default(app);

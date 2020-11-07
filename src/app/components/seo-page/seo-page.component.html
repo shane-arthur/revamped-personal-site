@@ -1,1 +1,3 @@
-<p>seo-page works!</p>
+<ng-container *ngFor="let jsonld of JsonLDs">
+    <ngx-json-ld  [json]="jsonld"></ngx-json-ld>
+</ng-container>

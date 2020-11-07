@@ -15,6 +15,7 @@
     "prerender": "ng run revamped-personal-site:prerender",
     "ssr:dev": "npm run build:universal && npm run start",
     "deploy": "npm run build:universal && gcloud app deploy"
+    
   },
   "private": true,
   "dependencies": {
@@ -31,6 +32,7 @@
     "@ngu/carousel": "^3.0.0",
     "@nguniversal/builders": "^10.0.1",
     "@nguniversal/express-engine": "^10.0.1",
+    "@ngx-lite/json-ld": "^0.6.2",
     "@sendgrid/mail": "^6.4.0",
     "angular-svg-icon": "^8.0.0",
     "body-parser": "^1.19.0",

@@ -3,7 +3,6 @@
     <header-component (loadProfileImages)="loadProfileImages()" (headerItemClicked)="headerItemClicked($event)"></header-component>
     <router-outlet></router-outlet>
 </div>
-
 <ng-container *appShellNoRender>
     <modal-component [type]="popupType" id="item-popup">
         <modal-container [type]="popupType"></modal-container>
