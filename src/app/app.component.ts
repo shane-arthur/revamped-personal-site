@@ -3,7 +3,6 @@ import { ModalService } from './services/modal.service';
 import { ImagePreloadService } from './services/image-preload.service';
 import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
