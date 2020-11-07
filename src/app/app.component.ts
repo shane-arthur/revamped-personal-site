@@ -3,12 +3,6 @@ import { ModalService } from './services/modal.service';
 import { ImagePreloadService } from './services/image-preload.service';
 import { isPlatformBrowser } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { catchError } from 'rxjs/operators';
-import { of } from 'rxjs';
-
-import { environment } from '../environments/environment';
-
-const url = `/error`;
 
 @Component({
   selector: 'app-root',
@@ -44,12 +38,6 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this._setMetaTagsAndTitle();
-
-    this.http.get(url).pipe(
-      catchError(err => {
-        return of(err);
-      })
-    ).subscribe();
   }
 
   ngAfterViewInit() {
