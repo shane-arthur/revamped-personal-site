@@ -7,7 +7,9 @@ import {
 import { DOCUMENT } from '@angular/common';
 import { LinkDefinition } from '../models/link-definition';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class MetaLinkService {
   constructor(
     private rendererFactory: RendererFactory2,

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start:dev": "ng serve",
+    "start:dev": "ng serve --port 4201",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -31,6 +31,7 @@
     "@ngu/carousel": "^3.0.0",
     "@nguniversal/builders": "^10.0.1",
     "@nguniversal/express-engine": "^10.0.1",
+    "@ngx-lite/json-ld": "^0.6.2",
     "@sendgrid/mail": "^6.4.0",
     "angular-svg-icon": "^8.0.0",
     "body-parser": "^1.19.0",
