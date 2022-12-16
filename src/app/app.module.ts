@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { UnderConstructionComponent } from './pages/under-construction/under-construction.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { HeaderItemComponent } from './components/header/header-item/header-item.component';
@@ -29,10 +30,12 @@ import { NguCarouselModule } from '@ngu/carousel';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { InfoWindowComponent } from './components/map/info-window/info-window.component';
 import { SeoPageComponent } from './components/seo-page/seo-page.component';
+import { MetaLinkService } from './services/meta-link.service';
 
 @NgModule({
   declarations: [
     AppComponent,
+    UnderConstructionComponent,
     HeaderComponent,
     HomePageComponent,
     HeaderItemComponent,
@@ -65,7 +68,7 @@ import { SeoPageComponent } from './components/seo-page/seo-page.component';
     NguCarouselModule,
     GoogleMapsModule
   ],
-  providers: [],
+  providers: [MetaLinkService],
   bootstrap: [AppComponent]
   
 })
